@@ -5,12 +5,18 @@ public class NukeGrow : MonoBehaviour
 {
     public VisualEffect visualEffect;
     public bool grow;
+    public bool stop;
     public float time;
     public float playRateMult = 1;
     public AnimationCurve curve;
     public float timeForCurve = 1;
     void FixedUpdate()
     {
+        if (stop)
+        {
+            visualEffect.Stop();
+            return;
+        }
         if(!grow) {
             visualEffect.playRate = 0;
             visualEffect.Reinit();
