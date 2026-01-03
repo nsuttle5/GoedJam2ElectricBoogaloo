@@ -176,7 +176,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
     {
         _vcams.Clear();
 
-        var ids = FindObjectsOfType<VcamId>(true);
+        var ids = FindObjectsByType<VCamID>(FindObjectsSortMode.InstanceID);
         foreach (var vid in ids)
         {
             if (vid == null) continue;
@@ -247,9 +247,12 @@ public sealed class CutsceneManager2 : MonoBehaviour
         _nextSceneOp.allowSceneActivation = false;
     }
 
-    private static YieldInstruction Wait(float seconds, bool unscaled)
+    private static IEnumerator Wait(float seconds, bool unscaled)
     {
-        return unscaled ? new WaitForSecondsRealtime(seconds) : new WaitForSeconds(seconds);
+        if (unscaled)
+            yield return new WaitForSecondsRealtime(seconds);
+        else
+            yield return new WaitForSeconds(seconds);
     }
 
     private void ApplyBrainBlend(CutsceneAsset.BlendStyle style, float time)
