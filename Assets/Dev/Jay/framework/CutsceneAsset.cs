@@ -5,15 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Cutscenes/Cutscene Asset", fileName = "Cutscene_")]
 public sealed class CutsceneAsset : ScriptableObject
 {
-    [Header("Startup Loading")]
-    [Tooltip("Scenes to load additively before playing this cutscene.")]
+    [Header("Startup")]
+    [Tooltip("All scenes to load additively before playing this cutscene.")]
     public List<string> additiveScenesToLoad = new();
 
     [Header("Shots")]
     public List<CutsceneShot> shots = new();
 
     [Header("End Behavior")]
-    [Tooltip("If set, we load this scene in Single mode at the end (optionally preloaded).")]
+    [Tooltip("If set, load this scene in Single mode at the end.")]
     public string nextSceneSingleLoad = "";
 
     public bool preloadNextSceneDuringLastShot = true;
@@ -22,24 +22,21 @@ public sealed class CutsceneAsset : ScriptableObject
     [Serializable]
     public struct CutsceneShot
     {
+        [Header("Shot Name")]
+        public string name;
+
         [Header("Camera")]
-        public string vcamId;
+        public string vCamID;
 
         [Min(0f)]
         public float duration;
 
-        [Tooltip("If true, uses unscaled time (ignores Time.timeScale).")]
-        public bool unscaledTime;
-
-        public int priorityOverride;
-
-        [Header("Blend Override (optional) (applied for the transition ->INTO this shot)")]
+        [Header("Blend Override (applies for transition INTO this shot)")]
         public bool overrideBlend;
         [Min(0f)] public float blendTime;
-
         public BlendStyle blendStyle;
 
-        [Header("Fade To Black (optional)")]
+        [Header("Fade (optional)")]
         public bool fadeIn;
         [Min(0f)] public float fadeInTime;
 

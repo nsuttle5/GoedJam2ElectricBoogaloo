@@ -64,7 +64,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
         EnsureBrain();
         if (brain == null) yield break;
 
-        // Ensure fader exists (only if we ever need it)
+        // Only created if any fade is used
         ScreenFader fader = null;
 
         // 1) Load additive scenes
@@ -86,63 +86,63 @@ public sealed class CutsceneManager2 : MonoBehaviour
         {
             var shot = cutscene.shots[i];
 
-            // apply blend override for transition INTO this shot
+            // Blend override for transition INTO this shot
             if (shot.overrideBlend)
                 ApplyBrainBlend(shot.blendStyle, shot.blendTime);
 
-            if (!_vcams.TryGetValue(shot.vcamId, out var vcam) || vcam == null)
+            if (!_vcams.TryGetValue(shot.vCamID, out var vcam) || vcam == null)
             {
-                Debug.LogError($"[CutsceneManager] Missing vcam id '{shot.vcamId}' (shot {i}).");
-                yield return Wait(shot.duration, shot.unscaledTime);
+                Debug.LogError($"[CutsceneManager] Missing vcam id '{shot.vCamID}' (shot {i}).");
+                yield return new WaitForSeconds(shot.duration);
                 continue;
             }
 
-            // fade in (to transparent)
+            // Fade-in means fade TO transparent at the start of this shot
             if (shot.fadeIn)
             {
                 fader ??= ScreenFader.EnsureExists();
-                // If we assume we’re currently faded, fade to alpha 0.
                 var target = shot.fadeColor; target.a = 0f;
-                fader.FadeTo(target, shot.fadeInTime, shot.unscaledTime);
+                fader.FadeTo(target, shot.fadeInTime, false); // keep your fader signature, always scaled time
             }
 
-            Activate(vcam, shot.priorityOverride);
+            Activate(vcam);
 
-            // last-shot preload
+            // Last-shot preload logic
             if (i == last && cutscene.preloadNextSceneDuringLastShot && !string.IsNullOrWhiteSpace(cutscene.nextSceneSingleLoad))
             {
                 float lead = Mathf.Clamp(cutscene.preloadLeadSeconds, 0f, shot.duration);
                 float firstPart = Mathf.Max(0f, shot.duration - lead);
 
-                if (firstPart > 0f) yield return Wait(firstPart, shot.unscaledTime);
+                if (firstPart > 0f) yield return new WaitForSeconds(firstPart);
 
                 BeginPreloadNextSingle(cutscene.nextSceneSingleLoad);
 
-                if (lead > 0f) yield return Wait(lead, shot.unscaledTime);
+                if (lead > 0f) yield return new WaitForSeconds(lead);
             }
             else
             {
-                // fade out near end of shot (to opaque)
+                // Fade-out near end of shot (fade TO opaque)
                 if (shot.fadeOut && shot.fadeOutTime > 0f && shot.fadeOutTime < shot.duration)
                 {
                     float before = shot.duration - shot.fadeOutTime;
-                    yield return Wait(before, shot.unscaledTime);
+                    yield return new WaitForSeconds(before);
 
                     fader ??= ScreenFader.EnsureExists();
                     var target = shot.fadeColor; target.a = 1f;
-                    fader.FadeTo(target, shot.fadeOutTime, shot.unscaledTime);
+                    fader.FadeTo(target, shot.fadeOutTime, false);
 
-                    yield return Wait(shot.fadeOutTime, shot.unscaledTime);
+                    yield return new WaitForSeconds(shot.fadeOutTime);
                 }
                 else
                 {
-                    yield return Wait(shot.duration, shot.unscaledTime);
+                    yield return new WaitForSeconds(shot.duration);
 
+                    // Instant fade-out at end if fadeOutTime <= 0
                     if (shot.fadeOut && shot.fadeOutTime <= 0f)
                     {
                         fader ??= ScreenFader.EnsureExists();
                         var target = shot.fadeColor; target.a = 1f;
-                        fader.FadeTo(target, 0f, shot.unscaledTime);
+                        fader.FadeTo(target, 0f, false);
                     }
                 }
             }
@@ -176,7 +176,10 @@ public sealed class CutsceneManager2 : MonoBehaviour
     {
         _vcams.Clear();
 
+        // IMPORTANT: make sure this matches your component name.
+        // If your component is VcamId, change VCamID -> VcamId here.
         var ids = FindObjectsByType<VCamID>(FindObjectsSortMode.InstanceID);
+
         foreach (var vid in ids)
         {
             if (vid == null) continue;
@@ -206,14 +209,13 @@ public sealed class CutsceneManager2 : MonoBehaviour
             if (kv.Value != null) kv.Value.Priority = basePriority;
     }
 
-    private void Activate(CinemachineCamera cam, int overridePriority)
+    private void Activate(CinemachineCamera cam)
     {
         SetAllBasePriority();
-        int p = overridePriority > 0 ? overridePriority : activePriority;
-        cam.Priority = p;
+        cam.Priority = activePriority;
 
         if (verboseLogs)
-            Debug.Log($"[CutsceneManager] Active: {cam.name} (priority {p})");
+            Debug.Log($"[CutsceneManager] Active: {cam.name} (priority {activePriority})");
     }
 
     private IEnumerator LoadAdditiveScenes(List<string> sceneNames)
@@ -247,14 +249,6 @@ public sealed class CutsceneManager2 : MonoBehaviour
         _nextSceneOp.allowSceneActivation = false;
     }
 
-    private static IEnumerator Wait(float seconds, bool unscaled)
-    {
-        if (unscaled)
-            yield return new WaitForSecondsRealtime(seconds);
-        else
-            yield return new WaitForSeconds(seconds);
-    }
-
     private void ApplyBrainBlend(CutsceneAsset.BlendStyle style, float time)
     {
         if (!_savedBlendValid)
@@ -283,10 +277,8 @@ public sealed class CutsceneManager2 : MonoBehaviour
 
     private void RestoreBrainBlend()
     {
-        if (!EnsureBlendRestorePossible()) return;
+        if (brain == null || !_savedBlendValid) return;
         brain.DefaultBlend = _savedBlend;
         _savedBlendValid = false;
-
-        bool EnsureBlendRestorePossible() => brain != null && _savedBlendValid;
     }
 }

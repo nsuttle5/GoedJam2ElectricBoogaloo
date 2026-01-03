@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d209d5500c737940b62184ad4bc5d4c, type: 3}
-  m_Name: Cutscene Test One
+  m_Name: Test 1
   m_EditorClassIdentifier: 
   additiveScenesToLoad: []
   shots: []
