@@ -31,17 +31,15 @@ public sealed class CutsceneAsset : ScriptableObject
         [Tooltip("If true, uses unscaled time (ignores Time.timeScale).")]
         public bool unscaledTime;
 
-        [Header("Priority (optional)")]
-        [Tooltip("<= 0 means use manager's Active Priority.")]
         public int priorityOverride;
 
-        [Header("Blend Override (optional, applied for the transition INTO this shot)")]
+        [Header("Blend Override (optional) (applied for the transition ->INTO this shot)")]
         public bool overrideBlend;
         [Min(0f)] public float blendTime;
 
         public BlendStyle blendStyle;
 
-        [Header("Fade (optional)")]
+        [Header("Fade To Black (optional)")]
         public bool fadeIn;
         [Min(0f)] public float fadeInTime;
 
