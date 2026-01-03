@@ -9,6 +9,18 @@ EditorBuildSettings:
     path: Assets/FinalScenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Dev/Jay/scenes/Core.unity
+    guid: 2c38b018f6804b94b8326da58673008a
+  - enabled: 1
+    path: Assets/Dev/Jay/scenes/TestScene1.unity
+    guid: 6fb50a527193e0947a6a040bb2b6cf53
+  - enabled: 1
+    path: Assets/Dev/Jay/scenes/TestScene2.unity
+    guid: 515a584a21d41c84eb57fa320698b3b3
+  - enabled: 1
+    path: Assets/Dev/Jay/scenes/TestScene3.unity
+    guid: 0a16173c7cc0f3e4a8c0aa5096b2902d
+  - enabled: 1
     path: Assets/FinalScenes/1_WarRoom.unity
     guid: 67a7b4aae8659f94aa8ef7ad9aba5425
   - enabled: 1
