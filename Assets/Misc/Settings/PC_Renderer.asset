@@ -29,7 +29,7 @@ MonoBehaviour:
     _CustomTextureLayerMask:
       serializedVersion: 2
       m_Bits: 0
-    _Thickness: 1
+    _Thickness: 1.03
     _ResolutionAdjust: 0
     _UseDepthFade: 0
     _FadeStart: 20
@@ -45,16 +45,16 @@ MonoBehaviour:
     _DepthThreshold: 1
     _DepthHardness: 0.9
     _DepthPower: 5
-    _EdgeColor: {r: 0, g: 0, b: 0, a: 1}
+    _EdgeColor: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
     _UseEdgeBlendDepthFade: 0
     _EdgeBlendFadeStart: 10
     _EdgeBlendFadeEnd: 20
-    _UseSketchEdges: 0
-    _Amplitude: 0.005
+    _UseSketchEdges: 1
+    _Amplitude: 0.00159
     _Frequency: 40
-    _ChangesPerSecond: 0
-    _UseGrain: 0
-    _GrainTexture: {fileID: 0}
+    _ChangesPerSecond: 4.28
+    _UseGrain: 1
+    _GrainTexture: {fileID: 2800000, guid: 5ddef0977dde72343992a79d27da33fe, type: 3}
     _GrainStrength: 1
     _GrainScale: 1
     _UseUvOffset: 0
