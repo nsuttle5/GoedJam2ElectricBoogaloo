@@ -250,6 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 285672835}
   - component: {fileID: 285672836}
+  - component: {fileID: 285672837}
   m_Layer: 0
   m_Name: VCAM_2
   m_TagString: Untagged
@@ -315,6 +316,20 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &285672837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285672834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 429947b2fd9db2d4984f37240b9cca7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: VCAM_2
+  cameraOverride: {fileID: 0}
 --- !u!1 &729007655
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,6 +340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 729007656}
   - component: {fileID: 729007657}
+  - component: {fileID: 729007658}
   m_Layer: 0
   m_Name: VCAM_1
   m_TagString: Untagged
@@ -390,6 +406,20 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &729007658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729007655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 429947b2fd9db2d4984f37240b9cca7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: VCAM_1
+  cameraOverride: {fileID: 0}
 --- !u!1 &911253368
 GameObject:
   m_ObjectHideFlags: 0

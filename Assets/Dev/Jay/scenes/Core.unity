@@ -442,23 +442,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dce0bf80bebc3f4a9e52c60ec359d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  additiveScenesToLoad:
-  - TestScene1
-  - TestScene2
-  - TestScene3
+  cutsceneAsset: {fileID: 11400000, guid: fa75fbf01130ede46a3082eef7f53366, type: 2}
   playOnStart: 1
-  shots:
-  - vcamId: 
-    duration: 0
-    priorityOverride: 0
-  - vcamId: 
-    duration: 0
-    priorityOverride: 0
   basePriority: 0
   activePriority: 20
-  nextSceneSingleLoad: 
-  preloadNextSceneDuringLastShot: 1
-  preloadLeadSeconds: 1
+  brain: {fileID: 484095811}
   verboseLogs: 0
 --- !u!1 &1151308827
 GameObject:

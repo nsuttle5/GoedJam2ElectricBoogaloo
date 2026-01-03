@@ -32,39 +32,44 @@ public sealed class CutsceneAssetEditor : Editor
         {
             var element = _shots.GetArrayElementAtIndex(index);
 
-            // One extra line for the "End Time" label + spacing.
-            float labelH = EditorGUIUtility.singleLineHeight + 4f;
+            // Header line for the element (shot title)
+            float headerH = EditorGUIUtility.singleLineHeight + 4f;
 
-            // Unity-computed height for the whole struct (includes color picker, foldouts, etc.)
-            float propH = EditorGUI.GetPropertyHeight(element, includeChildren: true);
+            // Draw the struct normally underneath
+            float bodyH = EditorGUI.GetPropertyHeight(element, includeChildren: true);
 
-            // Bottom padding to prevent overlap with the reorder controls
-            float pad = 10f;
-
-            return labelH + propH + pad;
+            // Add padding so next element never overlaps
+            return headerH + bodyH + 10f;
         };
 
         _shotsList.drawElementCallback = (rect, index, isActive, isFocused) =>
         {
             var element = _shots.GetArrayElementAtIndex(index);
 
-            float duration = GetDuration(index);
-            float cumulative = GetCumulativeEndTime(index);
+            // inset
+            rect.x += 6f;
+            rect.width -= 12f;
+            rect.y += 2f;
 
-            // Inset horizontally a bit so it doesn't hug the list border
-            rect.x += 4f;
-            rect.width -= 8f;
+            // Grab name + duration
+            string shotName = GetString(element, "name");
+            float dur = GetFloat(element, "duration");
+            float end = GetCumulativeEndTime(index);
 
-            // 1) End-time label
-            var labelRect = new Rect(rect.x, rect.y + 2f, rect.width, EditorGUIUtility.singleLineHeight);
-            EditorGUI.LabelField(labelRect, $"End Time: {cumulative:0.###}s   (Shot {index + 1} dur {duration:0.###}s)");
+            if (string.IsNullOrWhiteSpace(shotName))
+                shotName = $"Shot {index + 1}";
 
-            // 2) Property block below label
-            float propY = labelRect.yMax + 2f;
-            var propRect = new Rect(rect.x, propY, rect.width, EditorGUI.GetPropertyHeight(element, true));
-            EditorGUI.PropertyField(propRect, element, GUIContent.none, includeChildren: true);
+            // 1) Title line
+            var titleRect = new Rect(rect.x, rect.y, rect.width, EditorGUIUtility.singleLineHeight);
+            EditorGUI.LabelField(titleRect, $"{shotName}   |   End: {end:0.###}s   |   Dur: {dur:0.###}s", EditorStyles.boldLabel);
+
+            // 2) Default struct drawing below the title
+            float bodyY = titleRect.yMax + 4f;
+            float bodyH = EditorGUI.GetPropertyHeight(element, includeChildren: true);
+            var bodyRect = new Rect(rect.x, bodyY, rect.width, bodyH);
+
+            EditorGUI.PropertyField(bodyRect, element, GUIContent.none, includeChildren: true);
         };
-
     }
 
     public override void OnInspectorGUI()
@@ -106,8 +111,7 @@ public sealed class CutsceneAssetEditor : Editor
     {
         if (index < 0 || index >= _shots.arraySize) return 0f;
         var element = _shots.GetArrayElementAtIndex(index);
-        var durProp = element.FindPropertyRelative("duration");
-        return durProp != null ? Mathf.Max(0f, durProp.floatValue) : 0f;
+        return GetFloat(element, "duration");
     }
 
     private float GetCumulativeEndTime(int index)
@@ -116,5 +120,17 @@ public sealed class CutsceneAssetEditor : Editor
         for (int i = 0; i <= index && i < _shots.arraySize; i++)
             sum += GetDuration(i);
         return sum;
+    }
+
+    private static float GetFloat(SerializedProperty element, string fieldName)
+    {
+        var p = element.FindPropertyRelative(fieldName);
+        return p != null ? Mathf.Max(0f, p.floatValue) : 0f;
+    }
+
+    private static string GetString(SerializedProperty element, string fieldName)
+    {
+        var p = element.FindPropertyRelative(fieldName);
+        return p != null ? p.stringValue : "";
     }
 }

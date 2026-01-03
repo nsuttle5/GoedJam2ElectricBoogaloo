@@ -4,11 +4,13 @@ using Unity.Cinemachine;
 [DisallowMultipleComponent]
 public sealed class VCamID : MonoBehaviour
 {
-    [Tooltip("Stable ID used by CutsceneManager (do NOT rely on GameObject name).")]
+    [Tooltip("ID used by CutsceneManager2")]
     public string id;
 
-    [Tooltip("If assigned, this is used. Otherwise we try GetComponent<CinemachineCamera>().")]
+    [Header("(ignore)")]
     public CinemachineCamera cameraOverride;
+
+
 
     public CinemachineCamera GetCamera()
     {

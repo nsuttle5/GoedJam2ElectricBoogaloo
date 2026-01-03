@@ -10,13 +10,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d209d5500c737940b62184ad4bc5d4c, type: 3}
-  m_Name: Test 1
+  m_Name: Final Scene Manager Test
   m_EditorClassIdentifier: 
-  additiveScenesToLoad: []
+  additiveScenesToLoad:
+  - TestScene1
+  - TestScene2
+  - TestScene3
   shots:
   - name: 
-    vCamID: 
-    duration: 0
+    vCamID: VCAM_2
+    duration: 3
+    overrideBlend: 0
+    blendTime: 0
+    blendStyle: 0
+    fadeIn: 0
+    fadeInTime: 0
+    fadeOut: 0
+    fadeOutTime: 0
+    fadeColor: {r: 0, g: 0, b: 0, a: 0}
+  - name: 
+    vCamID: VCAM_4
+    duration: 3
+    overrideBlend: 0
+    blendTime: 0
+    blendStyle: 0
+    fadeIn: 0
+    fadeInTime: 0
+    fadeOut: 0
+    fadeOutTime: 0
+    fadeColor: {r: 0, g: 0, b: 0, a: 0}
+  - name: 
+    vCamID: VCAM_5
+    duration: 3
     overrideBlend: 0
     blendTime: 0
     blendStyle: 0

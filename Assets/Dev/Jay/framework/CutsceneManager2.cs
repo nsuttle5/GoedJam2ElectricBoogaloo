@@ -9,6 +9,10 @@ public sealed class CutsceneManager2 : MonoBehaviour
 {
     public static CutsceneManager2 Instance { get; private set; }
 
+    [Header("Cutscene")]
+    [SerializeField] private CutsceneAsset cutsceneAsset;
+    [SerializeField] private bool playOnStart = true;
+
     [Header("Defaults")]
     [SerializeField] private int basePriority = 0;
     [SerializeField] private int activePriority = 20;
@@ -33,6 +37,24 @@ public sealed class CutsceneManager2 : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
+    private void Start()
+    {
+        if (playOnStart && cutsceneAsset != null)
+            Play(cutsceneAsset);
+    }
+
+    public void PlayAssigned()
+    {
+        if (cutsceneAsset == null)
+        {
+            Debug.LogError("[CutsceneManager] No CutsceneAsset assigned in inspector.");
+            return;
+        }
+        Play(cutsceneAsset);
+    }
+
+
+
 
     private void EnsureBrain()
     {
