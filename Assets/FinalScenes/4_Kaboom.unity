@@ -5310,6 +5310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CineMachineSetup
       objectReference: {fileID: 0}
+    - target: {fileID: 7742155329899852462, guid: 569ef747bf2451b4b857415e2dc86f8b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
