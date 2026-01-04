@@ -4698,8 +4698,6 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
-<<<<<<< HEAD
-=======
 --- !u!1 &1727525687
 GameObject:
   m_ObjectHideFlags: 0
@@ -4870,7 +4868,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1903490323}
   m_LocalEulerAnglesHint: {x: 42.873, y: -148.235, z: 0}
->>>>>>> 14f3d73886e6ee1e95e24415deddbf24eb5904e5
 --- !u!1 &1747980928
 GameObject:
   m_ObjectHideFlags: 0
