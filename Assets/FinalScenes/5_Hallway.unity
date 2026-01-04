@@ -1081,6 +1081,7 @@ GameObject:
   - component: {fileID: 576382518}
   - component: {fileID: 576382517}
   - component: {fileID: 576382516}
+  - component: {fileID: 576382519}
   m_Layer: 0
   m_Name: DOLLY_SHOT
   m_TagString: Untagged
@@ -1152,7 +1153,7 @@ MonoBehaviour:
     - rid: 3625767226884227155
       type: {class: SplineAutoDolly/FixedSpeed, ns: Unity.Cinemachine, asm: Unity.Cinemachine}
       data:
-        Speed: 0.05
+        Speed: 0
 --- !u!114 &576382518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,6 +1197,21 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &576382519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576382514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d642337675005644980b9fe2b373b7a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 576382518}
+  dolly: {fileID: 576382517}
+  dollySpeed: 0.15
 --- !u!1 &585234423
 GameObject:
   m_ObjectHideFlags: 0
