@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/FinalScenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/FinalScenes/0_Title.unity
+    guid: 499da49cb694738499f297b95981d024
+  - enabled: 1
     path: Assets/Dev/Jay/scenes/Core.unity
     guid: 2c38b018f6804b94b8326da58673008a
   - enabled: 1
