@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d209d5500c737940b62184ad4bc5d4c, type: 3}
   m_Name: Test5
   m_EditorClassIdentifier: 
-  additiveScenesToLoad: []
+  additiveScenesToLoad:
+  - 
+  - 
+  - 
   shots: []
   nextSceneSingleLoad: 
   preloadNextSceneDuringLastShot: 1

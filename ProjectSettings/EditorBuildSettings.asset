@@ -29,6 +29,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FinalScenes/2_BattleField.unity
     guid: e597814363ea05843935765ca019af7e
+  - enabled: 1
+    path: Assets/FinalScenes/3_RadioRooms.unity
+    guid: fcb5d18471b274246a17030c5860c193
+  - enabled: 1
+    path: Assets/FinalScenes/5_Hallway.unity
+    guid: 45a716f2a06c71448ba5bc7f78a71875
+  - enabled: 1
+    path: Assets/FinalScenes/6_Doorway.unity
+    guid: 8fb44558ad535ad40ae88c5972a36d10
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

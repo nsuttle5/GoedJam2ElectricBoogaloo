@@ -19,32 +19,43 @@ MonoBehaviour:
   shots:
   - name: 
     vCamID: VCAM_2
-    duration: 3
+    duration: 5
     overrideBlend: 0
     blendTime: 0
     blendStyle: 0
     fadeIn: 0
-    fadeInTime: 0
-    fadeOut: 0
-    fadeOutTime: 0
+    fadeInTime: 1
+    fadeOut: 1
+    fadeOutTime: 1
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
   - name: 
     vCamID: VCAM_4
-    duration: 3
-    overrideBlend: 0
+    duration: 5
+    overrideBlend: 1
     blendTime: 0
-    blendStyle: 0
-    fadeIn: 0
-    fadeInTime: 0
+    blendStyle: 4
+    fadeIn: 1
+    fadeInTime: 2
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
   - name: 
     vCamID: VCAM_5
-    duration: 3
+    duration: 5
+    overrideBlend: 1
+    blendTime: 0
+    blendStyle: 3
+    fadeIn: 0
+    fadeInTime: 0
+    fadeOut: 0
+    fadeOutTime: 0
+    fadeColor: {r: 0, g: 0, b: 0, a: 0}
+  - name: 
+    vCamID: VCAM_2
+    duration: 5
     overrideBlend: 0
     blendTime: 0
-    blendStyle: 0
+    blendStyle: 4
     fadeIn: 0
     fadeInTime: 0
     fadeOut: 0
