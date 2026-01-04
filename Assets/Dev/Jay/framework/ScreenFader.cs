@@ -23,6 +23,8 @@ public sealed class ScreenFader : MonoBehaviour
     private void BuildUI()
     {
         var canvasGO = new GameObject("Canvas");
+
+
         canvasGO.transform.SetParent(transform, false);
         canvas = canvasGO.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
@@ -40,6 +42,9 @@ public sealed class ScreenFader : MonoBehaviour
         var rt = image.rectTransform;
         rt.anchorMin = Vector2.zero;
         rt.anchorMax = Vector2.one;
+
+
+
         rt.offsetMin = Vector2.zero;
         rt.offsetMax = Vector2.zero;
     }
@@ -68,6 +73,7 @@ public sealed class ScreenFader : MonoBehaviour
             float a = Mathf.Clamp01(t / duration);
             image.color = Color.Lerp(start, target, a);
             yield return null;
+
         }
         image.color = target;
     }

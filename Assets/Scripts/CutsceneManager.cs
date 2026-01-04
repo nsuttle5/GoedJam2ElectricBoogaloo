@@ -58,10 +58,16 @@ public class CutsceneManager : MonoBehaviour
 
         if(cameraOn == cameraHolder.cameraList.Count - 1)
         {
+
+
+
             cameraHolder.cameraList[cameraOn].Prioritize();
 
             StartCoroutine(loadNextScene());
             yield return new WaitForSeconds(cameraHolder.shotLengths[cameraOn]);
+
+
+
             canMoveOn = true;
         } else
         {
@@ -76,6 +82,9 @@ public class CutsceneManager : MonoBehaviour
     {
         Debug.Log("started load");
         AsyncOperation nextScene = SceneManager.LoadSceneAsync(cameraHolder.nextScene);
+
+
+
         nextScene.allowSceneActivation = false;
 
         while(!canMoveOn && !nextScene.isDone)
