@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f39cca01b51b681458d03b4a4876fe40
+guid: 8ad89c5d1a11fe44f9510e1092091cad
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -31,11 +31,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: root|walking_2
-      takeName: root|walking_2
-      internalID: 9032325477108613440
+      name: idle_1
+      takeName: root|guy_idle_1
+      internalID: 359299328267422681
       firstFrame: 0
-      lastFrame: 30
+      lastFrame: 59
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

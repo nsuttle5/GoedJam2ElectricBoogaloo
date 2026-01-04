@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9ea2674b07e7606478318faadc7296f4
+guid: f39cca01b51b681458d03b4a4876fe40
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -31,11 +31,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walking 1
-      takeName: root|Walking 1
-      internalID: 4431436659462392178
+      name: walking 2
+      takeName: root|walking_2
+      internalID: 9032325477108613440
       firstFrame: 0
-      lastFrame: 31
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -43,7 +43,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 1
+      loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
