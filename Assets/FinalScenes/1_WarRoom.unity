@@ -1024,8 +1024,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00:00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14414,7 +14414,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 45.9
   orthographic: 0
   orthographic size: 10
   m_Depth: 0
@@ -14440,8 +14440,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951532043}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.98333436, z: 0.18180652, w: 0}
-  m_LocalPosition: {x: -8.41485, y: 6.7688046, z: -19.042637}
+  m_LocalRotation: {x: 0.07329904, y: 0.70329744, z: -0.07329904, w: 0.70329744}
+  m_LocalPosition: {x: 2.9471498, y: 2.1188047, z: -0.0026369095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
