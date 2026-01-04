@@ -8,9 +8,11 @@ using UnityEngine.SceneManagement;
 public sealed class CutsceneManager2 : MonoBehaviour
 {
     public static CutsceneManager2 Instance { get; private set; }
+    [Header("Shot number")]
+    public int shotNumber = 0;
 
     [Header("Cutscene")]
-    [SerializeField] private CutsceneAsset cutsceneAsset;
+    [SerializeField] public CutsceneAsset cutsceneAsset;
     [SerializeField] private bool playOnStart = true;
 
     [Header("Defaults")]
@@ -254,6 +256,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
 
     private void Activate(CinemachineCamera cam)
     {
+        shotNumber++;
         SetAllBasePriority();
 
         cam.Priority = activePriority;
