@@ -8,32 +8,42 @@ using UnityEngine.SceneManagement;
 public sealed class CutsceneManager2 : MonoBehaviour
 {
     public static CutsceneManager2 Instance { get; private set; }
-    [Header("Shot number")]
-    public int shotNumber = 0;
 
-    [Header("Cutscene")]
-    [SerializeField] public CutsceneAsset cutsceneAsset;
-    [SerializeField] private bool playOnStart = true;
+    [Header("Debug")]
+    public int shotNumber = 0;
+    [SerializeField] private bool verboseLogs = false;
+
+    [Header("Playlist")]
+    [Tooltip("Cutscenes played in order.")]
+    [SerializeField] private List<CutsceneAsset> playlist = new();
+
+
+
+
+    [Tooltip("If true, plays the playlist on Start.")]
+    [SerializeField] private bool playPlaylistOnStart = true;
+
+    [Tooltip("Index in the playlist to start from.")]
+    [SerializeField, Min(0)] private int startIndex = 0;
 
     [Header("Defaults")]
     [SerializeField] private int basePriority = 0;
     [SerializeField] private int activePriority = 20;
 
-
+    [Tooltip("If empty, we'll try to find one in the scene.")]
     [SerializeField] private CinemachineBrain brain;
-
-
-
-    [Header("Debug")]
-    [SerializeField] private bool verboseLogs = false;
 
     private readonly Dictionary<string, CinemachineCamera> _vcams = new();
     private Coroutine _routine;
-    private AsyncOperation _nextSceneOp;
 
     // Store/restore brain blend
     private CinemachineBlendDefinition _savedBlend;
     private bool _savedBlendValid;
+
+    // Preload op for *current* cutscene's next-scene (if any)
+    private AsyncOperation _nextSceneOp;
+
+    private int _currentPlaylistIndex = -1;
 
     private void Awake()
     {
@@ -41,27 +51,15 @@ public sealed class CutsceneManager2 : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
+
+
+
+
     private void Start()
     {
-        if (playOnStart && cutsceneAsset != null)
-            Play(cutsceneAsset);
-
-
+        if (playPlaylistOnStart)
+            PlayPlaylist(startIndex);
     }
-
-    public void PlayAssigned()
-    {
-        if (cutsceneAsset == null)
-        {
-            Debug.LogError("[CutsceneManager] No CutsceneAsset assigned in inspector.");
-            return;
-        }
-        Play(cutsceneAsset);
-    }
-
-
-
-
 
     private void EnsureBrain()
     {
@@ -71,14 +69,38 @@ public sealed class CutsceneManager2 : MonoBehaviour
             Debug.LogError("[CutsceneManager] No CinemachineBrain found. Add CinemachineBrain to your Main Camera.");
     }
 
-    public void Play(CutsceneAsset cutscene)
+
+
+
+    // --- Public API ---
+
+    public void PlayPlaylist(int fromIndex = 0)
     {
-        if (cutscene == null) { Debug.LogError("[CutsceneManager] CutsceneAsset is null."); return; }
+        EnsureBrain();
+        if (brain == null) return;
+
+        if (playlist == null || playlist.Count == 0)
+        {
+            Debug.LogWarning("[CutsceneManager] Playlist is empty.");
+            return;
+        }
+
+        fromIndex = Mathf.Clamp(fromIndex, 0, playlist.Count - 1);
 
         if (_routine != null) StopCoroutine(_routine);
+        _routine = StartCoroutine(PlayPlaylistRoutine(fromIndex));
 
 
-        _routine = StartCoroutine(PlayRoutine(cutscene));
+
+    }
+
+    public void PlayIndex(int index) => PlayPlaylist(index);
+
+    public void PlayNext()
+    {
+        if (playlist == null || playlist.Count == 0) return;
+        int next = Mathf.Clamp(_currentPlaylistIndex + 1, 0, playlist.Count - 1);
+        PlayPlaylist(next);
     }
 
     public void Stop()
@@ -86,70 +108,103 @@ public sealed class CutsceneManager2 : MonoBehaviour
         if (_routine != null) StopCoroutine(_routine);
         _routine = null;
 
+        _currentPlaylistIndex = -1;
+        _nextSceneOp = null;
+
         SetAllBasePriority();
         RestoreBrainBlend();
     }
 
+    // --- Routines ---
 
-    private IEnumerator PlayRoutine(CutsceneAsset cutscene)
+    private IEnumerator PlayPlaylistRoutine(int fromIndex)
     {
-        EnsureBrain();
-        if (brain == null) yield break;
 
-        // Only created if any fade is used
+
+
+        //one ScreenFader shared across playlist
         ScreenFader fader = null;
 
-        // 1) Load additive scenes
+        for (int i = fromIndex; i < playlist.Count; i++)
+        {
+            _currentPlaylistIndex = i;
+
+            var cutscene = playlist[i];
+            if (cutscene == null)
+            {
+                Debug.LogWarning($"[CutsceneManager] Playlist entry {i} is null. Skipping.");
+                continue;
+            }
+
+            // Reset per-cutscene state
+            shotNumber = 0;
+            _nextSceneOp = null;
+
+
+
+
+            if (verboseLogs)
+                Debug.Log($"[CutsceneManager] Playing cutscene {i + 1}/{playlist.Count}: {cutscene.name}");
+
+            // Play this cutscene; returns when done (or scene changes)
+            yield return PlaySingleCutsceneRoutine(cutscene, fader);
+
+            if (!string.IsNullOrWhiteSpace(cutscene.nextSceneSingleLoad))
+            {
+                if (verboseLogs)
+                    Debug.Log("[CutsceneManager] Cutscene triggered Single scene load. Ending playlist.");
+                break;
+            }
+        }
+
+        _routine = null;
+    }
+
+    private IEnumerator PlaySingleCutsceneRoutine(CutsceneAsset cutscene, ScreenFader fader)
+    {
+        // 1) Load additive scenes for this cutscene
         yield return LoadAdditiveScenes(cutscene.additiveScenesToLoad);
-
-
-        // 2) Build registry
+        // 2) Build registry after scenes are loaded
         RebuildRegistry();
 
         if (cutscene.shots == null || cutscene.shots.Count == 0)
         {
-            Debug.LogWarning("[CutsceneManager] Cutscene has no shots.");
+            Debug.LogWarning($"[CutsceneManager] Cutscene '{cutscene.name}' has no shots.");
             yield break;
         }
 
-        // 3) Play shots
         int last = cutscene.shots.Count - 1;
 
-        for (int i = 0; i < cutscene.shots.Count; i++)
+        for (int s = 0; s < cutscene.shots.Count; s++)
         {
+            var shot = cutscene.shots[s];
 
-
-
-            var shot = cutscene.shots[i];
-
-            // Blend override for transition INTO this shot
             if (shot.overrideBlend)
                 ApplyBrainBlend(shot.blendStyle, shot.blendTime);
 
             if (!_vcams.TryGetValue(shot.vCamID, out var vcam) || vcam == null)
             {
-                Debug.LogError($"[CutsceneManager] Missing vcam id '{shot.vCamID}' (shot {i}).");
+                Debug.LogError($"[CutsceneManager] Missing vcam id '{shot.vCamID}' (shot {s}) in cutscene '{cutscene.name}'.");
                 yield return new WaitForSeconds(shot.duration);
                 continue;
             }
 
-            // Fade-in means fade TO transparent at the start of this shot
+
 
             if (shot.fadeIn)
             {
                 fader ??= ScreenFader.EnsureExists();
                 var target = shot.fadeColor; target.a = 0f;
-                fader.FadeTo(target, shot.fadeInTime, false); // keep your fader signature, always scaled time
+                fader.FadeTo(target, shot.fadeInTime, false);
             }
 
             Activate(vcam);
 
             // Last-shot preload logic
-            if (i == last && cutscene.preloadNextSceneDuringLastShot && !string.IsNullOrWhiteSpace(cutscene.nextSceneSingleLoad))
+            if (s == last && cutscene.preloadNextSceneDuringLastShot && !string.IsNullOrWhiteSpace(cutscene.nextSceneSingleLoad))
             {
                 float lead = Mathf.Clamp(cutscene.preloadLeadSeconds, 0f, shot.duration);
                 float firstPart = Mathf.Max(0f, shot.duration - lead);
-
 
                 if (firstPart > 0f) yield return new WaitForSeconds(firstPart);
 
@@ -159,10 +214,9 @@ public sealed class CutsceneManager2 : MonoBehaviour
             }
             else
             {
-                // Fade-out near end of shot (fade TO opaque)
+
+
                 if (shot.fadeOut && shot.fadeOutTime > 0f && shot.fadeOutTime < shot.duration)
-
-
                 {
                     float before = shot.duration - shot.fadeOutTime;
                     yield return new WaitForSeconds(before);
@@ -177,7 +231,6 @@ public sealed class CutsceneManager2 : MonoBehaviour
                 {
                     yield return new WaitForSeconds(shot.duration);
 
-                    // Instant fade-out at end if fadeOutTime <= 0
                     if (shot.fadeOut && shot.fadeOutTime <= 0f)
                     {
                         fader ??= ScreenFader.EnsureExists();
@@ -185,15 +238,18 @@ public sealed class CutsceneManager2 : MonoBehaviour
                         fader.FadeTo(target, 0f, false);
                     }
                 }
+
+
+
             }
         }
 
 
-        // End cleanup
+
         SetAllBasePriority();
         RestoreBrainBlend();
 
-        // 4) End scene load
+        // End scene load (Single) for this cutscene
         if (!string.IsNullOrWhiteSpace(cutscene.nextSceneSingleLoad))
         {
             if (_nextSceneOp == null)
@@ -203,33 +259,27 @@ public sealed class CutsceneManager2 : MonoBehaviour
             {
                 _nextSceneOp.allowSceneActivation = true;
                 while (!_nextSceneOp.isDone) yield return null;
-
-
             }
             else
             {
                 SceneManager.LoadScene(cutscene.nextSceneSingleLoad, LoadSceneMode.Single);
             }
         }
-
-        _routine = null;
     }
+
+    // --- Registry / Cameras ---
 
     private void RebuildRegistry()
     {
         _vcams.Clear();
 
-        // IMPORTANT: make sure this matches your component name.
-        // If your component is VcamId, change VCamID -> VcamId here.
         var ids = FindObjectsByType<VCamID>(FindObjectsSortMode.InstanceID);
-
         foreach (var vid in ids)
         {
             if (vid == null) continue;
             if (string.IsNullOrWhiteSpace(vid.id)) continue;
 
             var cam = vid.GetCamera();
-
             if (cam == null) continue;
 
             if (_vcams.ContainsKey(vid.id))
@@ -238,13 +288,16 @@ public sealed class CutsceneManager2 : MonoBehaviour
                 continue;
             }
 
+
+
+
+
             _vcams.Add(vid.id, cam);
         }
 
         SetAllBasePriority();
 
         if (verboseLogs)
-
             Debug.Log($"[CutsceneManager] Registered {_vcams.Count} vcams: {string.Join(", ", _vcams.Keys)}");
     }
 
@@ -259,18 +312,23 @@ public sealed class CutsceneManager2 : MonoBehaviour
         shotNumber++;
         SetAllBasePriority();
 
+
+
+
+
         cam.Priority = activePriority;
 
         if (verboseLogs)
             Debug.Log($"[CutsceneManager] Active: {cam.name} (priority {activePriority})");
     }
 
+    // --- Scene loading helpers ---
+
     private IEnumerator LoadAdditiveScenes(List<string> sceneNames)
     {
         if (sceneNames == null) yield break;
 
         foreach (var sceneName in sceneNames)
-
         {
             if (string.IsNullOrWhiteSpace(sceneName)) continue;
             if (IsSceneLoaded(sceneName)) continue;
@@ -280,24 +338,34 @@ public sealed class CutsceneManager2 : MonoBehaviour
         }
     }
 
+
+
+
+
     private static bool IsSceneLoaded(string sceneName)
     {
         for (int i = 0; i < SceneManager.sceneCount; i++)
         {
-
             var s = SceneManager.GetSceneAt(i);
             if (s.isLoaded && s.name == sceneName) return true;
         }
         return false;
     }
 
-    private void BeginPreloadNextSingle(string sceneName)
 
+
+
+
+    private void BeginPreloadNextSingle(string sceneName)
     {
         if (_nextSceneOp != null) return;
         _nextSceneOp = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
         _nextSceneOp.allowSceneActivation = false;
     }
+
+
+
+    // --- Blend override helpers ---
 
     private void ApplyBrainBlend(CutsceneAsset.BlendStyle style, float time)
     {
@@ -306,7 +374,6 @@ public sealed class CutsceneManager2 : MonoBehaviour
             _savedBlend = brain.DefaultBlend;
             _savedBlendValid = true;
         }
-
 
         if (style == CutsceneAsset.BlendStyle.Cut)
         {
@@ -321,9 +388,6 @@ public sealed class CutsceneManager2 : MonoBehaviour
             CutsceneAsset.BlendStyle.EaseOut => CinemachineBlendDefinition.Styles.EaseOut,
             CutsceneAsset.BlendStyle.Linear => CinemachineBlendDefinition.Styles.Linear,
             _ => CinemachineBlendDefinition.Styles.EaseInOut
-
-
-
         };
 
         brain.DefaultBlend = new CinemachineBlendDefinition(cmStyle, Mathf.Max(0f, time));
@@ -336,4 +400,3 @@ public sealed class CutsceneManager2 : MonoBehaviour
         _savedBlendValid = false;
     }
 }
-
