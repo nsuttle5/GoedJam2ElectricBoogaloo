@@ -1,4 +1,3 @@
-// Assets/Scripts/Events/EventSequencer.cs
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,10 +11,12 @@ public sealed class EventSequencer : MonoBehaviour
     [SerializeField] private bool playOnEnable = true;
     [SerializeField] private bool useUnscaledTime = false;
 
-    [Tooltip("Optional: start at this time when playing.")]
+
+
+
+
     [SerializeField, Min(0f)] private float startTime = 0f;
 
-    [Header("Debug")]
     [SerializeField] private bool verboseLogs = false;
 
     private readonly List<EventSequenceAsset.TimedEvent> _sorted = new();
@@ -34,6 +35,8 @@ public sealed class EventSequencer : MonoBehaviour
             Play(startTime);
     }
 
+
+
     private void Update()
     {
         if (!_playing || _sorted.Count == 0) return;
@@ -45,6 +48,9 @@ public sealed class EventSequencer : MonoBehaviour
         FireDueEvents();
     }
 
+
+
+
     public void SetSequence(EventSequenceAsset newSequence, bool restart = true)
     {
         sequence = newSequence;
@@ -52,26 +58,37 @@ public sealed class EventSequencer : MonoBehaviour
         if (restart) Play(startTime);
     }
 
+
+
     public void Play(float time = 0f)
     {
         _time = Mathf.Max(0f, time);
         _nextIndex = FindFirstEventIndexAtOrAfter(_time);
         _playing = true;
 
-        // If we started exactly on an event time, we still want to fire it once when we pass it.
+
+
         FireDueEvents();
     }
 
     public void Stop() => _playing = false;
 
     public void Pause() => _playing = false;
+
+
     public void Resume() => _playing = true;
 
     public void ResetToStart()
     {
         _time = 0f;
         _nextIndex = 0;
+
+
+
     }
+
+
+
 
     private void RebuildCache()
     {
@@ -82,6 +99,9 @@ public sealed class EventSequencer : MonoBehaviour
         _sorted.AddRange(sequence.events);
         _sorted.Sort((a, b) => a.time.CompareTo(b.time));
 
+
+
+
         _nextIndex = 0;
         _time = 0f;
     }
@@ -91,6 +111,9 @@ public sealed class EventSequencer : MonoBehaviour
         while (_nextIndex < _sorted.Count && _sorted[_nextIndex].time <= _time)
         {
             var ev = _sorted[_nextIndex];
+
+
+
             _nextIndex++;
 
             if (verboseLogs)
@@ -100,9 +123,13 @@ public sealed class EventSequencer : MonoBehaviour
         }
     }
 
+
+
     private int FindFirstEventIndexAtOrAfter(float t)
     {
-        // Linear is fine for small lists; if you expect big lists, replace with binary search.
+        // MAYBE replace with binary search
+
+
         for (int i = 0; i < _sorted.Count; i++)
             if (_sorted[i].time >= t)
                 return i;
