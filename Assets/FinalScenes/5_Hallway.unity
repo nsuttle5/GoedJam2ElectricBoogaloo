@@ -1378,6 +1378,7 @@ GameObject:
   - component: {fileID: 576382517}
   - component: {fileID: 576382516}
   - component: {fileID: 576382519}
+  - component: {fileID: 576382520}
   m_Layer: 0
   m_Name: DOLLY_SHOT
   m_TagString: Untagged
@@ -1508,6 +1509,21 @@ MonoBehaviour:
   cam: {fileID: 576382518}
   dolly: {fileID: 576382517}
   dollySpeed: 0.125
+--- !u!114 &576382520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576382514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b3b29bf37f40447a41edbb220f716a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationX: 1
+  maxRotationY: 1
+  smoothSpeed: 5
 --- !u!1 &585234423
 GameObject:
   m_ObjectHideFlags: 0

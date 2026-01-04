@@ -9120,6 +9120,7 @@ GameObject:
   - component: {fileID: 567143635}
   - component: {fileID: 567143636}
   - component: {fileID: 567143634}
+  - component: {fileID: 567143637}
   m_Layer: 0
   m_Name: INFRONT_OF_PRES
   m_TagString: Untagged
@@ -9216,6 +9217,21 @@ MonoBehaviour:
   AmplitudeGain: 1
   FrequencyGain: 1
   m_NoiseOffsets: {x: 238.01889, y: -410.72903, z: 190.57593}
+--- !u!114 &567143637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567143632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b3b29bf37f40447a41edbb220f716a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationX: 1
+  maxRotationY: 1
+  smoothSpeed: 5
 --- !u!1 &568933894
 GameObject:
   m_ObjectHideFlags: 0
@@ -20929,6 +20945,7 @@ GameObject:
   - component: {fileID: 1450869997}
   - component: {fileID: 1450869999}
   - component: {fileID: 1450869998}
+  - component: {fileID: 1450870000}
   m_Layer: 0
   m_Name: BUTTON_AND_TABLE
   m_TagString: Untagged
@@ -21008,6 +21025,21 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1450870000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450869996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b3b29bf37f40447a41edbb220f716a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationX: 1
+  maxRotationY: 1
+  smoothSpeed: 5
 --- !u!1 &1452338481
 GameObject:
   m_ObjectHideFlags: 0
@@ -21115,6 +21147,7 @@ GameObject:
   - component: {fileID: 1461488487}
   - component: {fileID: 1461488489}
   - component: {fileID: 1461488488}
+  - component: {fileID: 1461488490}
   m_Layer: 0
   m_Name: MAP_WIDE_FOV
   m_TagString: Untagged
@@ -21194,6 +21227,21 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1461488490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461488486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b3b29bf37f40447a41edbb220f716a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationX: 1
+  maxRotationY: 1
+  smoothSpeed: 5
 --- !u!1 &1464037968
 GameObject:
   m_ObjectHideFlags: 0
@@ -22423,6 +22471,7 @@ GameObject:
   - component: {fileID: 1539634472}
   - component: {fileID: 1539634473}
   - component: {fileID: 1539634471}
+  - component: {fileID: 1539634474}
   m_Layer: 0
   m_Name: ABOVE_TABLE
   m_TagString: Untagged
@@ -22519,6 +22568,21 @@ MonoBehaviour:
   AmplitudeGain: 1
   FrequencyGain: 1
   m_NoiseOffsets: {x: -2.1842651, y: 72.5907, z: 970.2501}
+--- !u!114 &1539634474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539634469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b3b29bf37f40447a41edbb220f716a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationX: 1
+  maxRotationY: 1
+  smoothSpeed: 5
 --- !u!1 &1547326435
 GameObject:
   m_ObjectHideFlags: 0
@@ -24677,6 +24741,7 @@ GameObject:
   - component: {fileID: 1720855122}
   - component: {fileID: 1720855124}
   - component: {fileID: 1720855123}
+  - component: {fileID: 1720855125}
   m_Layer: 0
   m_Name: TABLE_FROM_SIDE
   m_TagString: Untagged
@@ -24756,6 +24821,21 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1720855125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720855121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b3b29bf37f40447a41edbb220f716a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationX: 1
+  maxRotationY: 1
+  smoothSpeed: 5
 --- !u!1 &1728236674
 GameObject:
   m_ObjectHideFlags: 0
@@ -24959,6 +25039,7 @@ GameObject:
   - component: {fileID: 1747980929}
   - component: {fileID: 1747980931}
   - component: {fileID: 1747980930}
+  - component: {fileID: 1747980932}
   m_Layer: 0
   m_Name: CLOCK_CAM
   m_TagString: Untagged
@@ -25038,6 +25119,21 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1747980932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747980928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b3b29bf37f40447a41edbb220f716a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationX: 1
+  maxRotationY: 1
+  smoothSpeed: 5
 --- !u!1 &1750160380
 GameObject:
   m_ObjectHideFlags: 0
@@ -25835,6 +25931,7 @@ GameObject:
   - component: {fileID: 1828912675}
   - component: {fileID: 1828912677}
   - component: {fileID: 1828912676}
+  - component: {fileID: 1828912678}
   m_Layer: 0
   m_Name: PRES_AND_BUTTON
   m_TagString: Untagged
@@ -25914,6 +26011,21 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1828912678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828912674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b3b29bf37f40447a41edbb220f716a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationX: 1
+  maxRotationY: 1
+  smoothSpeed: 5
 --- !u!1 &1830110419
 GameObject:
   m_ObjectHideFlags: 0

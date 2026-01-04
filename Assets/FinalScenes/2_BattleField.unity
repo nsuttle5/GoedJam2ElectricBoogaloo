@@ -480,6 +480,7 @@ GameObject:
   - component: {fileID: 17730025}
   - component: {fileID: 17730027}
   - component: {fileID: 17730026}
+  - component: {fileID: 17730028}
   m_Layer: 0
   m_Name: WE_BRING_THE_BOOM
   m_TagString: Untagged
@@ -559,6 +560,21 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &17730028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17730024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b3b29bf37f40447a41edbb220f716a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationX: 1
+  maxRotationY: 1
+  smoothSpeed: 5
 --- !u!1 &18651575
 GameObject:
   m_ObjectHideFlags: 0
@@ -7590,6 +7606,7 @@ GameObject:
   - component: {fileID: 349749393}
   - component: {fileID: 349749392}
   - component: {fileID: 349749394}
+  - component: {fileID: 349749395}
   m_Layer: 0
   m_Name: OVERHEAD_SHOT_BATTLEFIELD
   m_TagString: Untagged
@@ -7669,6 +7686,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: OVERHEAD_SHOT_BATTLEFIELD
   cameraOverride: {fileID: 0}
+--- !u!114 &349749395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349749391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b3b29bf37f40447a41edbb220f716a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationX: 1
+  maxRotationY: 1
+  smoothSpeed: 5
 --- !u!1 &352450590
 GameObject:
   m_ObjectHideFlags: 0
@@ -22576,6 +22608,7 @@ GameObject:
   - component: {fileID: 946935842}
   - component: {fileID: 946935844}
   - component: {fileID: 946935843}
+  - component: {fileID: 946935845}
   m_Layer: 0
   m_Name: LOOKING_AT_COM_TENT
   m_TagString: Untagged
@@ -22655,6 +22688,21 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &946935845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946935841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b3b29bf37f40447a41edbb220f716a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationX: 1
+  maxRotationY: 1
+  smoothSpeed: 5
 --- !u!1 &950045963
 GameObject:
   m_ObjectHideFlags: 0
@@ -25524,6 +25572,7 @@ GameObject:
   - component: {fileID: 1093056067}
   - component: {fileID: 1093056068}
   - component: {fileID: 1093056069}
+  - component: {fileID: 1093056070}
   m_Layer: 0
   m_Name: LENS_VIEW
   m_TagString: Untagged
@@ -25604,6 +25653,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: LENS_VIEW
   cameraOverride: {fileID: 0}
+--- !u!114 &1093056070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093056066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b3b29bf37f40447a41edbb220f716a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationX: 1
+  maxRotationY: 1
+  smoothSpeed: 5
 --- !u!1 &1093639138
 GameObject:
   m_ObjectHideFlags: 0
@@ -28248,6 +28312,7 @@ GameObject:
   - component: {fileID: 1242586767}
   - component: {fileID: 1242586769}
   - component: {fileID: 1242586768}
+  - component: {fileID: 1242586770}
   m_Layer: 0
   m_Name: GUY_OUTSIDE_COMS
   m_TagString: Untagged
@@ -28327,6 +28392,21 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1242586770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242586766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b3b29bf37f40447a41edbb220f716a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationX: 1
+  maxRotationY: 1
+  smoothSpeed: 5
 --- !u!1 &1242712607
 GameObject:
   m_ObjectHideFlags: 0
@@ -49963,6 +50043,7 @@ GameObject:
   - component: {fileID: 2112122764}
   - component: {fileID: 2112122766}
   - component: {fileID: 2112122765}
+  - component: {fileID: 2112122767}
   m_Layer: 0
   m_Name: GUY_HOLDING_BIOS
   m_TagString: Untagged
@@ -50042,6 +50123,21 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &2112122767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112122763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b3b29bf37f40447a41edbb220f716a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRotationX: 1
+  maxRotationY: 1
+  smoothSpeed: 5
 --- !u!1 &2112749409
 GameObject:
   m_ObjectHideFlags: 0
