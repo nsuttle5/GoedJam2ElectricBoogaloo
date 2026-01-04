@@ -7,6 +7,7 @@ public sealed class VCamID : MonoBehaviour
     [Tooltip("ID used by CutsceneManager2")]
     public string id;
 
+
     [Header("(ignore)")]
     public CinemachineCamera cameraOverride;
 

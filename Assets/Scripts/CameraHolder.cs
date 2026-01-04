@@ -16,6 +16,9 @@ public class CameraHolder : MonoBehaviour
 
         CM = GameObject.Find("CutsceneManager").GetComponentInChildren<CutsceneManager>();
         CM.cameraHolder = this;
+
+
+
         CM.canMoveOn = false;
         CM.cameraOn = 0;
         CM.startScenes();

@@ -36,6 +36,8 @@ public sealed class CutsceneAsset : ScriptableObject
         [Min(0f)] public float blendTime;
         public BlendStyle blendStyle;
 
+
+
         [Header("Fade (optional)")]
         public bool fadeIn;
         [Min(0f)] public float fadeInTime;

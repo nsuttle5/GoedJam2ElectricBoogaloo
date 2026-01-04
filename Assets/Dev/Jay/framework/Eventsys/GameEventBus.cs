@@ -1,4 +1,3 @@
-// Assets/Scripts/Events/GameEventBus.cs
 using System;
 using UnityEngine;
 
