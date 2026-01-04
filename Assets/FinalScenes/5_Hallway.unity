@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 576382518}
   dolly: {fileID: 576382517}
-  dollySpeed: 0.15
+  dollySpeed: 0.125
 --- !u!1 &585234423
 GameObject:
   m_ObjectHideFlags: 0
