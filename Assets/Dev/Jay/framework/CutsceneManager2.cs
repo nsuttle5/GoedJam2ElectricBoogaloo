@@ -17,8 +17,10 @@ public sealed class CutsceneManager2 : MonoBehaviour
     [SerializeField] private int basePriority = 0;
     [SerializeField] private int activePriority = 20;
 
-    [Tooltip("If empty, we'll try to find one in the scene.")]
+
     [SerializeField] private CinemachineBrain brain;
+
+
 
     [Header("Debug")]
     [SerializeField] private bool verboseLogs = false;
@@ -41,6 +43,8 @@ public sealed class CutsceneManager2 : MonoBehaviour
     {
         if (playOnStart && cutsceneAsset != null)
             Play(cutsceneAsset);
+
+
     }
 
     public void PlayAssigned()
@@ -52,6 +56,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
         }
         Play(cutsceneAsset);
     }
+
 
 
 
@@ -69,6 +74,8 @@ public sealed class CutsceneManager2 : MonoBehaviour
         if (cutscene == null) { Debug.LogError("[CutsceneManager] CutsceneAsset is null."); return; }
 
         if (_routine != null) StopCoroutine(_routine);
+
+
         _routine = StartCoroutine(PlayRoutine(cutscene));
     }
 
@@ -81,6 +88,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
         RestoreBrainBlend();
     }
 
+
     private IEnumerator PlayRoutine(CutsceneAsset cutscene)
     {
         EnsureBrain();
@@ -91,6 +99,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
 
         // 1) Load additive scenes
         yield return LoadAdditiveScenes(cutscene.additiveScenesToLoad);
+
 
         // 2) Build registry
         RebuildRegistry();
@@ -106,6 +115,9 @@ public sealed class CutsceneManager2 : MonoBehaviour
 
         for (int i = 0; i < cutscene.shots.Count; i++)
         {
+
+
+
             var shot = cutscene.shots[i];
 
             // Blend override for transition INTO this shot
@@ -120,6 +132,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
             }
 
             // Fade-in means fade TO transparent at the start of this shot
+
             if (shot.fadeIn)
             {
                 fader ??= ScreenFader.EnsureExists();
@@ -135,6 +148,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
                 float lead = Mathf.Clamp(cutscene.preloadLeadSeconds, 0f, shot.duration);
                 float firstPart = Mathf.Max(0f, shot.duration - lead);
 
+
                 if (firstPart > 0f) yield return new WaitForSeconds(firstPart);
 
                 BeginPreloadNextSingle(cutscene.nextSceneSingleLoad);
@@ -145,6 +159,8 @@ public sealed class CutsceneManager2 : MonoBehaviour
             {
                 // Fade-out near end of shot (fade TO opaque)
                 if (shot.fadeOut && shot.fadeOutTime > 0f && shot.fadeOutTime < shot.duration)
+
+
                 {
                     float before = shot.duration - shot.fadeOutTime;
                     yield return new WaitForSeconds(before);
@@ -170,6 +186,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
             }
         }
 
+
         // End cleanup
         SetAllBasePriority();
         RestoreBrainBlend();
@@ -184,6 +201,8 @@ public sealed class CutsceneManager2 : MonoBehaviour
             {
                 _nextSceneOp.allowSceneActivation = true;
                 while (!_nextSceneOp.isDone) yield return null;
+
+
             }
             else
             {
@@ -208,6 +227,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
             if (string.IsNullOrWhiteSpace(vid.id)) continue;
 
             var cam = vid.GetCamera();
+
             if (cam == null) continue;
 
             if (_vcams.ContainsKey(vid.id))
@@ -222,6 +242,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
         SetAllBasePriority();
 
         if (verboseLogs)
+
             Debug.Log($"[CutsceneManager] Registered {_vcams.Count} vcams: {string.Join(", ", _vcams.Keys)}");
     }
 
@@ -234,6 +255,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
     private void Activate(CinemachineCamera cam)
     {
         SetAllBasePriority();
+
         cam.Priority = activePriority;
 
         if (verboseLogs)
@@ -245,6 +267,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
         if (sceneNames == null) yield break;
 
         foreach (var sceneName in sceneNames)
+
         {
             if (string.IsNullOrWhiteSpace(sceneName)) continue;
             if (IsSceneLoaded(sceneName)) continue;
@@ -258,6 +281,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
     {
         for (int i = 0; i < SceneManager.sceneCount; i++)
         {
+
             var s = SceneManager.GetSceneAt(i);
             if (s.isLoaded && s.name == sceneName) return true;
         }
@@ -265,6 +289,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
     }
 
     private void BeginPreloadNextSingle(string sceneName)
+
     {
         if (_nextSceneOp != null) return;
         _nextSceneOp = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
@@ -279,6 +304,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
             _savedBlendValid = true;
         }
 
+
         if (style == CutsceneAsset.BlendStyle.Cut)
         {
             brain.DefaultBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.Cut, 0f);
@@ -292,6 +318,9 @@ public sealed class CutsceneManager2 : MonoBehaviour
             CutsceneAsset.BlendStyle.EaseOut => CinemachineBlendDefinition.Styles.EaseOut,
             CutsceneAsset.BlendStyle.Linear => CinemachineBlendDefinition.Styles.Linear,
             _ => CinemachineBlendDefinition.Styles.EaseInOut
+
+
+
         };
 
         brain.DefaultBlend = new CinemachineBlendDefinition(cmStyle, Mathf.Max(0f, time));
@@ -304,3 +333,4 @@ public sealed class CutsceneManager2 : MonoBehaviour
         _savedBlendValid = false;
     }
 }
+

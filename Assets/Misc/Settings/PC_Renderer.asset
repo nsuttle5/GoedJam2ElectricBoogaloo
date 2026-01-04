@@ -29,7 +29,7 @@ MonoBehaviour:
     _CustomTextureLayerMask:
       serializedVersion: 2
       m_Bits: 0
-    _Thickness: 1.03
+    _Thickness: 0.5
     _ResolutionAdjust: 0
     _UseDepthFade: 0
     _FadeStart: 20
@@ -54,7 +54,7 @@ MonoBehaviour:
     _Frequency: 40
     _ChangesPerSecond: 4.28
     _UseGrain: 1
-    _GrainTexture: {fileID: 2800000, guid: 5ddef0977dde72343992a79d27da33fe, type: 3}
+    _GrainTexture: {fileID: 0}
     _GrainStrength: 1
     _GrainScale: 1
     _UseUvOffset: 0
