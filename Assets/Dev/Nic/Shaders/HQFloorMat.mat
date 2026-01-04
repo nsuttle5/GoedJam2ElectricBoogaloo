@@ -56,7 +56,7 @@ Material:
     - _Rotation: 0.74
     - _TileSize: 1
     m_Colors:
-    - _TileColorOne: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 0}
-    - _TileColorTwo: {r: 0.065681726, g: 0.094418265, b: 0.11320752, a: 0}
+    - _TileColorOne: {r: 0.6473057, g: 0.6473057, b: 0.6473057, a: 0}
+    - _TileColorTwo: {r: 0.150897, g: 0.21691623, b: 0.2600826, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
