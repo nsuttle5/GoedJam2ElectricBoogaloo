@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 290f7da0c39bc411fb7953d1eee3c0c1
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 17854
+  packageName: LazyClouds
+  packageVersion: 1.41
+  assetPath: Assets/LazyClouds/scripts/main.cs
+  uploadId: 61446
