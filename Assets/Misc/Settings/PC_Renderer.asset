@@ -29,13 +29,13 @@ MonoBehaviour:
     _CustomTextureLayerMask:
       serializedVersion: 2
       m_Bits: 0
-    _Thickness: 0.79
+    _Thickness: 0.67
     _ResolutionAdjust: 0
     _UseDepthFade: 0
     _FadeStart: 20
     _FadeEnd: 40
     _NormalsEdgeDetection: 1
-    _NormalsOffset: 0.1
+    _NormalsOffset: 0.609
     _NormalsHardness: 0
     _NormalsPower: 1
     _DepthEdgeDetection: 1

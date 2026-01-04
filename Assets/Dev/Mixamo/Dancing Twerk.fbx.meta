@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ac6a012a6466027439456ba213f4701f
+guid: 15df142e01464f840a5c9b0436895640
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -31,11 +31,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Yelling
+      name: mixamo.com
       takeName: mixamo.com
       internalID: -203655887218126122
-      firstFrame: 0
-      lastFrame: 235
+      firstFrame: 187
+      lastFrame: 315
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
