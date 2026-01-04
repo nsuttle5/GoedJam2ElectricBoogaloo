@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: b211be3cce1bb4728b8d67f40599bea1
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 17854
+  packageName: LazyClouds
+  packageVersion: 1.41
+  assetPath: Assets/LazyClouds/materials/clouds.mat
+  uploadId: 61446
