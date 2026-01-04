@@ -53,6 +53,11 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    m_Colors: []
+    - _StarBrightness: 8.53
+    - _Star_Density: 0.2
+    - _Twinkle_Speed: 1.67
+    m_Colors:
+    - _BackgroundColor: {r: 0, g: 0, b: 0, a: 0}
+    - _StarColor: {r: 7.3207545, g: 7.0197935, b: 5.5596294, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
