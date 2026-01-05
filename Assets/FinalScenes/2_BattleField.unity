@@ -6605,6 +6605,7 @@ GameObject:
   - component: {fileID: 323323348}
   - component: {fileID: 323323347}
   - component: {fileID: 323323346}
+  - component: {fileID: 323323349}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -6640,7 +6641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualEffect: {fileID: 323323348}
-  grow: 1
+  grow: 0
   stop: 0
   time: 0
   playRateMult: 0.5
@@ -6774,6 +6775,34 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
+--- !u!114 &323323349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323323344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6db520d01cfbd94fb2e811ad9211f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listenForKey: nuke
+  trigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 323323346}
+        m_TargetAssemblyTypeName: NukeGrow, Assembly-CSharp
+        m_MethodName: Grow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &324920728
 GameObject:
   m_ObjectHideFlags: 0
@@ -46223,6 +46252,7 @@ GameObject:
   - component: {fileID: 1951521260}
   - component: {fileID: 1951521259}
   - component: {fileID: 1951521258}
+  - component: {fileID: 1951521261}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -46240,7 +46270,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 220923200}
@@ -46261,6 +46291,7 @@ MonoBehaviour:
   grow: 0
   radius: 0
   radiusIncreaseSpeed: 5
+  maxRadius: 1000
 --- !u!73398921 &1951521259
 VFXRenderer:
   serializedVersion: 1
@@ -46328,7 +46359,7 @@ VisualEffect:
       - m_Value: 2
         m_Name: ForceMult
         m_Overridden: 1
-      - m_Value: 5
+      - m_Value: 100
         m_Name: SizeMult
         m_Overridden: 1
       - m_Value: 200
@@ -46354,6 +46385,34 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
+--- !u!114 &1951521261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951521256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6db520d01cfbd94fb2e811ad9211f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listenForKey: nuke
+  trigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1951521258}
+        m_TargetAssemblyTypeName: GroundBreak, Assembly-CSharp
+        m_MethodName: Grow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1952287977
 GameObject:
   m_ObjectHideFlags: 0

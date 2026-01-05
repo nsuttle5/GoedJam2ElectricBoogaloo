@@ -7,6 +7,12 @@ public class GroundBreak : MonoBehaviour
     public bool grow;
     public float radius;
     public float radiusIncreaseSpeed;
+    public float maxRadius = 500;
+
+    public void Grow()
+    {
+        grow = true;
+    }
     void FixedUpdate()
     {
         if(!grow) {
@@ -17,5 +23,10 @@ public class GroundBreak : MonoBehaviour
         visualEffect.SetFloat("Radius", radius);
         radius += radiusIncreaseSpeed;
         visualEffect.SendEvent("Spawn");
+
+        if(radius >= maxRadius)
+        {
+            grow = false;
+        }
     }
 }
