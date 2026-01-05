@@ -12,5 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c460b2612110fd94b8436f1b6de64ee0, type: 3}
   m_Name: MapZoomOut
   m_EditorClassIdentifier: 
-  additiveEvents: []
-  events: []
+  additiveEvents:
+  - time: 0.5
+    eventKey: StartMapZoom
+    note: StartMapZoom
+  - time: 1.25
+    eventKey: EndMapZoom
+    note: EndMapZoom
+  events:
+  - time: 0.5
+    eventKey: StartMapZoom
+    note: StartMapZoom
+  - time: 1.75
+    eventKey: EndMapZoom
+    note: EndMapZoom
