@@ -6151,7 +6151,7 @@ MonoBehaviour:
   shotNumber: 0
   verboseLogs: 0
   playlist:
-  - {fileID: 11400000, guid: 8f466b5274a83fb48942d8dbffbde3a7, type: 2}
+  - {fileID: 11400000, guid: cd9e94c4af2e4544e9c089d2c1c5c693, type: 2}
   playPlaylistOnStart: 1
   startIndex: 0
   basePriority: 0
