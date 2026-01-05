@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: OutsideTent
   m_EditorClassIdentifier: 
   additiveEvents:
+  - time: 0
+    eventKey: run1
+    note: 
   - time: 2
-    eventKey: talk
+    eventKey: talk1
     note: 
   events:
+  - time: 0
+    eventKey: run1
+    note: 
   - time: 2
-    eventKey: talk
+    eventKey: talk1
     note: 
