@@ -54,7 +54,7 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 0}
+  - eventSequence: {fileID: 11400000, guid: 01f9aa8d9caf6f24a88b1a8493ee65c2, type: 2}
     name: Guy looking through bios 1
     vCamID: GUY_HOLDING_BIOS
     duration: 2
@@ -66,7 +66,7 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 0}
+  - eventSequence: {fileID: 11400000, guid: 2720f496f84238a4d8ea423f28ed72a3, type: 2}
     name: Now he pulls out the radio
     vCamID: GUY_HOLDING_BIOS
     duration: 2
@@ -114,7 +114,7 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 0}
+  - eventSequence: {fileID: 11400000, guid: f9aab8595ddaed7409709abcfa267599, type: 2}
     name: Running to coms
     vCamID: LOOKING_AT_COM_TENT
     duration: 2
@@ -294,7 +294,7 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 11400000, guid: ef800217e8896ab4bbdcf7c493069ca4, type: 2}
+  - eventSequence: {fileID: 11400000, guid: 42fc7ec14b022ce49beb0612ffca5ff6, type: 2}
     name: WE BRING THE BOOM
     vCamID: BOOM
     duration: 15
@@ -303,8 +303,8 @@ MonoBehaviour:
     blendStyle: 4
     fadeIn: 0
     fadeInTime: 0
-    fadeOut: 0
-    fadeOutTime: 0
+    fadeOut: 1
+    fadeOutTime: 5
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
   nextSceneSingleLoad: 
   preloadNextSceneDuringLastShot: 1

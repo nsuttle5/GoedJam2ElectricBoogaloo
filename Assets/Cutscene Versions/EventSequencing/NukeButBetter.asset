@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c460b2612110fd94b8436f1b6de64ee0, type: 3}
-  m_Name: Nuke
+  m_Name: NukeButBetter
   m_EditorClassIdentifier: 
   additiveEvents:
   - time: 2
     eventKey: nuke
     note: 
-  - time: 14
+  - time: 13
     eventKey: GoBack
     note: 
   events:
   - time: 2
     eventKey: nuke
     note: 
-  - time: 16
+  - time: 15
     eventKey: GoBack
     note: 

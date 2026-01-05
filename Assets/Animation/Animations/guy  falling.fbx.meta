@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb08c5983f07bf547ac08fa515fd1a85
+guid: 8baf5f26451c48a4cafd037ef95bf447
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -31,18 +31,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: stand and argue
-      takeName: root|stand argue
-      internalID: 3740687265773286815
+      name: guy falling
+      takeName: root|guy falling
+      internalID: -2227671899317901951
       firstFrame: 0
-      lastFrame: 624
+      lastFrame: 68
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
