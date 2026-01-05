@@ -20,7 +20,7 @@ public class ClockEvents : MonoBehaviour
         } else
         {
             GameObject.Find("Timer").GetComponent<StartTimer>().isNegative = true;
-            GameObject.Find("Timer").GetComponent<StartTimer>().StartCountDown(5);
+            GameObject.Find("Timer").GetComponent<StartTimer>().StartCountDown(3);
         }
     }
 }
