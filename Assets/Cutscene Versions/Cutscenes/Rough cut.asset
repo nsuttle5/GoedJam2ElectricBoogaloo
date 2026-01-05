@@ -210,7 +210,7 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 0}
+  - eventSequence: {fileID: 11400000, guid: 0f56ea1b313773e48a9195f5f554c372, type: 2}
     name: Cool dolly shot
     vCamID: DOLLY_SHOT
     duration: 10
