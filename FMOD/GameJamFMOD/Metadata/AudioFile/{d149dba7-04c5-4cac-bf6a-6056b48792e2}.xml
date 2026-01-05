@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{d149dba7-04c5-4cac-bf6a-6056b48792e2}">
+		<property name="assetPath">
+			<value>after-explosion-ears-ringing-95784.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>10.031020408163265</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{72c9a839-51cd-4ef7-9e95-993bd7d501d1}</destination>
+		</relationship>
+	</object>
+</objects>
