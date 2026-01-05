@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 75a5efbe0035a43458f9c9af2c3206b6
+guid: 2af560832f7a2b543b85ecce98ab835b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -31,18 +31,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: ButtonPress
-      takeName: root|press
-      internalID: -8489546942427595836
+      name: guy holding walkie talkie
+      takeName: 'root|guy holding walkie talkie '
+      internalID: 5749287138554862501
       firstFrame: 0
-      lastFrame: 65
+      lastFrame: 59
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1

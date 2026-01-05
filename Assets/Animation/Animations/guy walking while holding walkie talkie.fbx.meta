@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 75a5efbe0035a43458f9c9af2c3206b6
+guid: ae705c197752c4c4bb537b0e3db14e2f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -31,18 +31,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: ButtonPress
-      takeName: root|press
-      internalID: -8489546942427595836
+      name: root|guy_walking_3
+      takeName: root|guy_walking_3
+      internalID: 1396394876343369576
       firstFrame: 0
-      lastFrame: 65
+      lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
