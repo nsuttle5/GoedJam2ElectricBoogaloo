@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: FMOD/GameJamFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639031880558757749
+  lastModified: 639031767200671302
   FileSizes:
   - Name: Desktop
     Value: 1264
@@ -243,7 +243,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -5455185184244675834}
   cacheVersion: 131857
-  cacheTime: 639031880558757749
+  cacheTime: 639031883985775062
   SerializableEventsDict:
   - key: event:/bgm
     index: 0
@@ -419,7 +419,7 @@ MonoBehaviour:
   Path: FMOD/GameJamFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639031880558757749
+  lastModified: 639031883985775062
   FileSizes:
   - Name: Desktop
     Value: 1564640
