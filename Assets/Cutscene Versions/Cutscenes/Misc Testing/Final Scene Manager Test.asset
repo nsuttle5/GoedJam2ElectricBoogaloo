@@ -17,7 +17,8 @@ MonoBehaviour:
   - TestScene2
   - TestScene3
   shots:
-  - name: 
+  - eventSequence: {fileID: 11400000, guid: f7cc7a2ca11399e408add9a2e2f7d22d, type: 2}
+    name: 
     vCamID: VCAM_2
     duration: 5
     overrideBlend: 0
@@ -28,7 +29,8 @@ MonoBehaviour:
     fadeOut: 1
     fadeOutTime: 1
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: 
+  - eventSequence: {fileID: 0}
+    name: 
     vCamID: VCAM_4
     duration: 5
     overrideBlend: 1
@@ -39,7 +41,8 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: 
+  - eventSequence: {fileID: 0}
+    name: 
     vCamID: VCAM_5
     duration: 5
     overrideBlend: 1
@@ -50,7 +53,8 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: 
+  - eventSequence: {fileID: 0}
+    name: 
     vCamID: VCAM_2
     duration: 5
     overrideBlend: 0
