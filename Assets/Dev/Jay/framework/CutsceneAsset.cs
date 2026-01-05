@@ -22,6 +22,10 @@ public sealed class CutsceneAsset : ScriptableObject
     [Serializable]
     public struct CutsceneShot
     {
+        [Header("Events (optional)")]
+        public EventSequenceAsset eventSequence;
+
+
         [Header("Shot Name")]
         public string name;
 

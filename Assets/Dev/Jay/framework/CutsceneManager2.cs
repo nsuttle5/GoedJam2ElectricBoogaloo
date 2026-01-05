@@ -17,6 +17,7 @@ public sealed class CutsceneManager2 : MonoBehaviour
     [Tooltip("Cutscenes played in order.")]
     [SerializeField] private List<CutsceneAsset> playlist = new();
 
+    private Coroutine _shotEventRoutine;
 
 
 
@@ -69,6 +70,55 @@ public sealed class CutsceneManager2 : MonoBehaviour
             Debug.LogError("[CutsceneManager] No CinemachineBrain found. Add CinemachineBrain to your Main Camera.");
     }
 
+    private void StopShotEvents()
+    {
+        if (_shotEventRoutine != null)
+        {
+            StopCoroutine(_shotEventRoutine);
+            _shotEventRoutine = null;
+        }
+    }
+
+    private void StartShotEvents(EventSequenceAsset seq, float shotDurationSeconds)
+    {
+        StopShotEvents();
+        if (seq == null || seq.events == null || seq.events.Count == 0) return;
+
+        _shotEventRoutine = StartCoroutine(PlayShotEventSequence(seq, shotDurationSeconds));
+    }
+
+    private IEnumerator PlayShotEventSequence(EventSequenceAsset seq, float shotDurationSeconds)
+    {
+        // Copy + sort so we don't mutate the asset list
+        var sorted = seq.events.OrderBy(e => e.time).ToList();
+
+        float t = 0f;
+        int i = 0;
+
+        while (t < shotDurationSeconds && i < sorted.Count)
+        {
+            // Wait until the next event time (clamped into the shot)
+            float targetTime = Mathf.Clamp(sorted[i].time, 0f, shotDurationSeconds);
+            float wait = targetTime - t;
+
+            if (wait > 0f)
+                yield return new WaitForSeconds(wait);
+
+            t = targetTime;
+
+            // Fire all events scheduled up to "t" (handles same-time events)
+            while (i < sorted.Count && sorted[i].time <= t + 0.0001f)
+            {
+                var ev = sorted[i];
+                i++;
+
+                // Match EventSequencer behavior: use current sequence time + this as source. :contentReference[oaicite:4]{index=4}
+                GameEventBus.Broadcast(ev.eventKey, t, this);
+            }
+
+            // Continue; t will advance next loop
+        }
+    }
 
 
 
@@ -113,6 +163,9 @@ public sealed class CutsceneManager2 : MonoBehaviour
 
         SetAllBasePriority();
         RestoreBrainBlend();
+
+        StopShotEvents();
+
     }
 
     // --- Routines ---
@@ -198,6 +251,9 @@ public sealed class CutsceneManager2 : MonoBehaviour
                 fader.FadeTo(target, shot.fadeInTime, false);
             }
 
+            // Start per-shot event sequence (optional)
+            StartShotEvents(shot.eventSequence, shot.duration);
+
             Activate(vcam);
 
             // Last-shot preload logic
@@ -238,10 +294,9 @@ public sealed class CutsceneManager2 : MonoBehaviour
                         fader.FadeTo(target, 0f, false);
                     }
                 }
-
-
-
             }
+
+            StopShotEvents();
         }
 
 
@@ -265,6 +320,9 @@ public sealed class CutsceneManager2 : MonoBehaviour
                 SceneManager.LoadScene(cutscene.nextSceneSingleLoad, LoadSceneMode.Single);
             }
         }
+
+        StopShotEvents();
+
     }
 
     // --- Registry / Cameras ---

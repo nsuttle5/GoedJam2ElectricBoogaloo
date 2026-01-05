@@ -12,22 +12,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c460b2612110fd94b8436f1b6de64ee0, type: 3}
   m_Name: Hallway
   m_EditorClassIdentifier: 
-  events:
-  - time: 1
-    eventKey: listenrun
-    note: hi1
-  - time: 1.5
-    eventKey: listenrun1
-    note: hi4
-  - time: 3
-    eventKey: door1
-    note: hi2
-  - time: 3.2
-    eventKey: door2
-    note: hi3
+  additiveEvents:
   - time: 6
+    eventKey: listenrun
+    note: 
+  - time: 0.5
+    eventKey: listenrun1
+    note: 
+  - time: 1
+    eventKey: door1
+    note: 
+  - time: 0.2
+    eventKey: door2
+    note: 
+  - time: 3
     eventKey: door3
-    note: hi4
-  - time: 6.2
+    note: 
+  - time: 0.2
     eventKey: door4
-    note: hi4
+    note: 
+  events:
+  - time: 6
+    eventKey: listenrun
+    note: 
+  - time: 6.5
+    eventKey: listenrun1
+    note: 
+  - time: 7.5
+    eventKey: door1
+    note: 
+  - time: 7.7
+    eventKey: door2
+    note: 
+  - time: 10.7
+    eventKey: door3
+    note: 
+  - time: 10.9
+    eventKey: door4
+    note: 
