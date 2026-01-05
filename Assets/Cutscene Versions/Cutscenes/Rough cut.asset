@@ -282,7 +282,7 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 0}
+  - eventSequence: {fileID: 11400000, guid: 1f6b131c6562a9443b7cc1ee84c3e369, type: 2}
     name: Back to bios guy
     vCamID: GUY_HOLDING_BIOS
     duration: 3

@@ -547,7 +547,7 @@ MonoBehaviour:
     FieldOfView: 90.8
     OrthographicSize: 10
     NearClipPlane: 0.1
-    FarClipPlane: 5000
+    FarClipPlane: 50000
     Dutch: 0
     ModeOverride: 0
     PhysicalProperties:
@@ -3293,7 +3293,6 @@ GameObject:
   m_Component:
   - component: {fileID: 131051301}
   - component: {fileID: 131051303}
-  - component: {fileID: 131051302}
   m_Layer: 0
   m_Name: idle guy (3)
   m_TagString: Untagged
@@ -3319,21 +3318,6 @@ Transform:
   - {fileID: 1840389105}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: -121.628, z: 0}
---- !u!114 &131051302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131051300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 131051303}
-  shotNumbers: 
 --- !u!95 &131051303
 Animator:
   serializedVersion: 7
@@ -3524,7 +3508,6 @@ GameObject:
   m_Component:
   - component: {fileID: 158386617}
   - component: {fileID: 158386619}
-  - component: {fileID: 158386618}
   m_Layer: 0
   m_Name: idle guy (18)
   m_TagString: Untagged
@@ -3550,21 +3533,6 @@ Transform:
   - {fileID: 2048068733}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: 37.362, z: 0}
---- !u!114 &158386618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 158386616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 158386619}
-  shotNumbers: 
 --- !u!95 &158386619
 Animator:
   serializedVersion: 7
@@ -3861,7 +3829,6 @@ GameObject:
   m_Component:
   - component: {fileID: 172485191}
   - component: {fileID: 172485193}
-  - component: {fileID: 172485192}
   m_Layer: 0
   m_Name: idle guy (15)
   m_TagString: Untagged
@@ -3887,21 +3854,6 @@ Transform:
   - {fileID: 336306195}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: 65.829, z: 0}
---- !u!114 &172485192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172485190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 172485193}
-  shotNumbers: 
 --- !u!95 &172485193
 Animator:
   serializedVersion: 7
@@ -5284,7 +5236,7 @@ Transform:
   m_GameObject: {fileID: 227725606}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -499.0619, y: 2356.0159, z: -4.04462}
+  m_LocalPosition: {x: 0, y: 2356.0159, z: -4.04462}
   m_LocalScale: {x: 21186, y: 1266, z: 21186}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5463,7 +5415,6 @@ GameObject:
   m_Component:
   - component: {fileID: 238507439}
   - component: {fileID: 238507441}
-  - component: {fileID: 238507440}
   m_Layer: 0
   m_Name: idle guy (13)
   m_TagString: Untagged
@@ -5489,21 +5440,6 @@ Transform:
   - {fileID: 1050981239}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: -99.697, z: 0}
---- !u!114 &238507440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238507438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 238507441}
-  shotNumbers: 
 --- !u!95 &238507441
 Animator:
   serializedVersion: 7
@@ -7682,7 +7618,6 @@ GameObject:
   m_Component:
   - component: {fileID: 340896402}
   - component: {fileID: 340896404}
-  - component: {fileID: 340896403}
   m_Layer: 0
   m_Name: idle guy (6)
   m_TagString: Untagged
@@ -7708,21 +7643,6 @@ Transform:
   - {fileID: 241706747}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: -41.355, z: 0}
---- !u!114 &340896403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340896401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 340896404}
-  shotNumbers: 
 --- !u!95 &340896404
 Animator:
   serializedVersion: 7
@@ -8136,7 +8056,7 @@ MonoBehaviour:
     FieldOfView: 69.3
     OrthographicSize: 10
     NearClipPlane: 0.1
-    FarClipPlane: 5000
+    FarClipPlane: 50000
     Dutch: 0
     ModeOverride: 0
     PhysicalProperties:
@@ -8375,7 +8295,6 @@ GameObject:
   m_Component:
   - component: {fileID: 354871252}
   - component: {fileID: 354871254}
-  - component: {fileID: 354871253}
   m_Layer: 0
   m_Name: idle guy (4)
   m_TagString: Untagged
@@ -8401,21 +8320,6 @@ Transform:
   - {fileID: 1032524652}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: -41.355, z: 0}
---- !u!114 &354871253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 354871251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 354871254}
-  shotNumbers: 
 --- !u!95 &354871254
 Animator:
   serializedVersion: 7
@@ -18443,8 +18347,8 @@ GameObject:
   m_Component:
   - component: {fileID: 612469284}
   - component: {fileID: 612469286}
-  - component: {fileID: 612469285}
   - component: {fileID: 612469287}
+  - component: {fileID: 612469288}
   m_Layer: 0
   m_Name: Guy holding bios
   m_TagString: Untagged
@@ -18470,21 +18374,6 @@ Transform:
   - {fileID: 1146777611}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: 41.187, z: 0}
---- !u!114 &612469285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 612469283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 612469286}
-  shotNumbers: 
 --- !u!95 &612469286
 Animator:
   serializedVersion: 7
@@ -18533,6 +18422,34 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: bio
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &612469288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612469283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6db520d01cfbd94fb2e811ad9211f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listenForKey: bio2
+  trigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 612469286}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: bio2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &612679714
@@ -19902,7 +19819,6 @@ GameObject:
   m_Component:
   - component: {fileID: 711569029}
   - component: {fileID: 711569031}
-  - component: {fileID: 711569030}
   m_Layer: 0
   m_Name: idle guy (12)
   m_TagString: Untagged
@@ -19928,21 +19844,6 @@ Transform:
   - {fileID: 1944462013}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: -133.39, z: 0}
---- !u!114 &711569030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711569028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 711569031}
-  shotNumbers: 
 --- !u!95 &711569031
 Animator:
   serializedVersion: 7
@@ -22007,6 +21908,79 @@ Transform:
   - {fileID: 1557424971}
   m_Father: {fileID: 1838167743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &843006351
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1459
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1461304994638716399, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 326180f5c46f9784693b533fc6b3d831, type: 2}
+    - target: {fileID: 919132149155446097, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
+      propertyPath: m_Name
+      value: TERRAIN
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f0ea9857e441ff4a91842a6985e11de, type: 3}
 --- !u!1 &843963078
 GameObject:
   m_ObjectHideFlags: 0
@@ -22205,7 +22179,6 @@ GameObject:
   m_Component:
   - component: {fileID: 850458934}
   - component: {fileID: 850458936}
-  - component: {fileID: 850458935}
   m_Layer: 0
   m_Name: Talking by coms
   m_TagString: Untagged
@@ -22231,21 +22204,6 @@ Transform:
   - {fileID: 1310900731}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: 63.825, z: 0}
---- !u!114 &850458935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 850458933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 850458936}
-  shotNumbers: 
 --- !u!95 &850458936
 Animator:
   serializedVersion: 7
@@ -23993,7 +23951,7 @@ MonoBehaviour:
     FieldOfView: 40
     OrthographicSize: 10
     NearClipPlane: 0.1
-    FarClipPlane: 5000
+    FarClipPlane: 50000
     Dutch: 0
     ModeOverride: 0
     PhysicalProperties:
@@ -24856,7 +24814,6 @@ GameObject:
   m_Component:
   - component: {fileID: 984928763}
   - component: {fileID: 984928765}
-  - component: {fileID: 984928764}
   m_Layer: 0
   m_Name: idle guy (9)
   m_TagString: Untagged
@@ -24882,21 +24839,6 @@ Transform:
   - {fileID: 255111785}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: -133.39, z: 0}
---- !u!114 &984928764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984928762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 984928765}
-  shotNumbers: 
 --- !u!95 &984928765
 Animator:
   serializedVersion: 7
@@ -24960,7 +24902,6 @@ GameObject:
   m_Component:
   - component: {fileID: 987996103}
   - component: {fileID: 987996105}
-  - component: {fileID: 987996104}
   m_Layer: 0
   m_Name: idle guy (2)
   m_TagString: Untagged
@@ -24986,21 +24927,6 @@ Transform:
   - {fileID: 455518557}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: -70.452, z: 0}
---- !u!114 &987996104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 987996102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 987996105}
-  shotNumbers: 
 --- !u!95 &987996105
 Animator:
   serializedVersion: 7
@@ -26449,7 +26375,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1059914952}
   - component: {fileID: 1059914954}
-  - component: {fileID: 1059914953}
   m_Layer: 0
   m_Name: idle guy (1)
   m_TagString: Untagged
@@ -26475,21 +26400,6 @@ Transform:
   - {fileID: 1891619147}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: -70.452, z: 0}
---- !u!114 &1059914953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059914951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 1059914954}
-  shotNumbers: 
 --- !u!95 &1059914954
 Animator:
   serializedVersion: 7
@@ -26947,7 +26857,7 @@ MonoBehaviour:
     FieldOfView: 58.9
     OrthographicSize: 10
     NearClipPlane: 0.1
-    FarClipPlane: 5000
+    FarClipPlane: 50000
     Dutch: 0
     ModeOverride: 0
     PhysicalProperties:
@@ -29921,7 +29831,7 @@ MonoBehaviour:
     FieldOfView: 42.3
     OrthographicSize: 10
     NearClipPlane: 0.1
-    FarClipPlane: 5000
+    FarClipPlane: 50000
     Dutch: 0
     ModeOverride: 0
     PhysicalProperties:
@@ -35583,7 +35493,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1311235443}
   - component: {fileID: 1311235445}
-  - component: {fileID: 1311235444}
   m_Layer: 0
   m_Name: idle guy (14)
   m_TagString: Untagged
@@ -35609,21 +35518,6 @@ Transform:
   - {fileID: 16095851}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: 109.975, z: 0}
---- !u!114 &1311235444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311235442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 1311235445}
-  shotNumbers: 
 --- !u!95 &1311235445
 Animator:
   serializedVersion: 7
@@ -37537,7 +37431,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1424070024}
   - component: {fileID: 1424070026}
-  - component: {fileID: 1424070025}
   m_Layer: 0
   m_Name: idle guy (7)
   m_TagString: Untagged
@@ -37563,21 +37456,6 @@ Transform:
   - {fileID: 456784308}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: -73.549, z: 0}
---- !u!114 &1424070025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424070023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 1424070026}
-  shotNumbers: 
 --- !u!95 &1424070026
 Animator:
   serializedVersion: 7
@@ -38580,6 +38458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1486453891}
   - component: {fileID: 1486453892}
+  - component: {fileID: 1486453893}
   m_Layer: 0
   m_Name: hand.l
   m_TagString: Untagged
@@ -38644,6 +38523,46 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &1486453893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486453890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6db520d01cfbd94fb2e811ad9211f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listenForKey: swap2
+  trigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 365482689}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 95112911}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1491685988
 GameObject:
@@ -40669,7 +40588,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1588558879}
   - component: {fileID: 1588558881}
-  - component: {fileID: 1588558880}
   m_Layer: 0
   m_Name: idle guy (8)
   m_TagString: Untagged
@@ -40695,21 +40613,6 @@ Transform:
   - {fileID: 1078309902}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: -117.121, z: 0}
---- !u!114 &1588558880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1588558878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 1588558881}
-  shotNumbers: 
 --- !u!95 &1588558881
 Animator:
   serializedVersion: 7
@@ -41980,7 +41883,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1665990386}
   - component: {fileID: 1665990388}
-  - component: {fileID: 1665990387}
   m_Layer: 0
   m_Name: idle guy (16)
   m_TagString: Untagged
@@ -42006,21 +41908,6 @@ Transform:
   - {fileID: 1758024721}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: 65.829, z: 0}
---- !u!114 &1665990387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665990385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 1665990388}
-  shotNumbers: 
 --- !u!95 &1665990388
 Animator:
   serializedVersion: 7
@@ -42383,7 +42270,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1680322258}
   - component: {fileID: 1680322260}
-  - component: {fileID: 1680322259}
   m_Layer: 0
   m_Name: idle guy (17)
   m_TagString: Untagged
@@ -42409,21 +42295,6 @@ Transform:
   - {fileID: 160850661}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: 25.503, z: 0}
---- !u!114 &1680322259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1680322257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 1680322260}
-  shotNumbers: 
 --- !u!95 &1680322260
 Animator:
   serializedVersion: 7
@@ -42456,7 +42327,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1686746082}
   - component: {fileID: 1686746084}
-  - component: {fileID: 1686746083}
   m_Layer: 0
   m_Name: idle guy (5)
   m_TagString: Untagged
@@ -42482,21 +42352,6 @@ Transform:
   - {fileID: 1148560428}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: -41.355, z: 0}
---- !u!114 &1686746083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686746081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 1686746084}
-  shotNumbers: 
 --- !u!95 &1686746084
 Animator:
   serializedVersion: 7
@@ -42882,7 +42737,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1714424483}
   - component: {fileID: 1714424485}
-  - component: {fileID: 1714424484}
   m_Layer: 0
   m_Name: idle guy (11)
   m_TagString: Untagged
@@ -42908,21 +42762,6 @@ Transform:
   - {fileID: 306857471}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: 41.934, z: 0}
---- !u!114 &1714424484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1714424482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 1714424485}
-  shotNumbers: 
 --- !u!95 &1714424485
 Animator:
   serializedVersion: 7
@@ -44973,7 +44812,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1822084734}
   - component: {fileID: 1822084736}
-  - component: {fileID: 1822084735}
   m_Layer: 0
   m_Name: idle guy (10)
   m_TagString: Untagged
@@ -44999,21 +44837,6 @@ Transform:
   - {fileID: 176490822}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: -133.39, z: 0}
---- !u!114 &1822084735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822084733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 1822084736}
-  shotNumbers: 
 --- !u!95 &1822084736
 Animator:
   serializedVersion: 7
@@ -46506,7 +46329,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1886125781}
   - component: {fileID: 1886125783}
-  - component: {fileID: 1886125782}
   m_Layer: 0
   m_Name: idle guy
   m_TagString: Untagged
@@ -46532,21 +46354,6 @@ Transform:
   - {fileID: 92510818}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: -102.226, z: 0}
---- !u!114 &1886125782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1886125780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 1886125783}
-  shotNumbers: 
 --- !u!95 &1886125783
 Animator:
   serializedVersion: 7
@@ -47834,7 +47641,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1937510077}
   - component: {fileID: 1937510079}
-  - component: {fileID: 1937510078}
   - component: {fileID: 1937510081}
   - component: {fileID: 1937510080}
   - component: {fileID: 1937510082}
@@ -47863,21 +47669,6 @@ Transform:
   - {fileID: 718294569}
   m_Father: {fileID: 1994548838}
   m_LocalEulerAnglesHint: {x: 0, y: -61.299, z: 0}
---- !u!114 &1937510078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1937510076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 1937510079}
-  shotNumbers: 
 --- !u!95 &1937510079
 Animator:
   serializedVersion: 7
@@ -48067,7 +47858,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1938614792}
   - component: {fileID: 1938614794}
-  - component: {fileID: 1938614793}
   m_Layer: 0
   m_Name: Talking by coms (1)
   m_TagString: Untagged
@@ -48093,21 +47883,6 @@ Transform:
   - {fileID: 456323123}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: -59.072, z: 0}
---- !u!114 &1938614793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938614791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 1938614794}
-  shotNumbers: 
 --- !u!95 &1938614794
 Animator:
   serializedVersion: 7
@@ -48549,7 +48324,7 @@ VFXRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
 --- !u!2083052967 &1951521260
 VisualEffect:
   m_ObjectHideFlags: 0
@@ -51312,7 +51087,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2072792696}
   - component: {fileID: 2072792698}
-  - component: {fileID: 2072792697}
   m_Layer: 0
   m_Name: Guy outside coms tent
   m_TagString: Untagged
@@ -51338,21 +51112,6 @@ Transform:
   - {fileID: 738564665}
   m_Father: {fileID: 38000322}
   m_LocalEulerAnglesHint: {x: 0, y: 60.194, z: 0}
---- !u!114 &2072792697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072792695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1f3ad28abc52a43bdacf97f659d2d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CM: {fileID: 0}
-  animator: {fileID: 2072792698}
-  shotNumbers: 
 --- !u!95 &2072792698
 Animator:
   serializedVersion: 7
@@ -52488,7 +52247,7 @@ MonoBehaviour:
     FieldOfView: 38.8
     OrthographicSize: 10
     NearClipPlane: 0.1
-    FarClipPlane: 5000
+    FarClipPlane: 50000
     Dutch: 0
     ModeOverride: 0
     PhysicalProperties:
@@ -54186,7 +53945,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3980357435906629321, guid: 55df96e36c65746458df753e8849b8c3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3467036689225513679, guid: 55df96e36c65746458df753e8849b8c3, type: 3}
@@ -54208,3 +53968,4 @@ SceneRoots:
   - {fileID: 394321212}
   - {fileID: 1855317532}
   - {fileID: 1994548838}
+  - {fileID: 843006351}
