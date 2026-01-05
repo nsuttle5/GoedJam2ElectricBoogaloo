@@ -14,6 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   additiveEvents:
   - time: 0.5
+<<<<<<< HEAD:Assets/Cutscene Versions/EventSequencing/MapZoomOut.asset
+    eventKey: StartMapZoom
+    note: StartMapZoom
+  - time: 1.25
+    eventKey: EndMapZoom
+    note: EndMapZoom
+  events:
+  - time: 0.5
+    eventKey: StartMapZoom
+    note: StartMapZoom
+  - time: 1.75
+    eventKey: EndMapZoom
+    note: EndMapZoom
+=======
     eventKey: ZoomInBios
     note: 
   - time: 1.5
@@ -26,3 +40,4 @@ MonoBehaviour:
   - time: 2
     eventKey: StopZoom
     note: 
+>>>>>>> 7ca68ece1878947882e647b9ace0d3e6d44792a8:Assets/Cutscene Versions/EventSequencing/ZoomIn.asset
