@@ -16,13 +16,13 @@ MonoBehaviour:
   - time: 0
     eventKey: run1
     note: 
-  - time: 1.5
+  - time: 1
     eventKey: talk1
     note: 
   events:
   - time: 0
     eventKey: run1
     note: 
-  - time: 1.5
+  - time: 1
     eventKey: talk1
     note: 

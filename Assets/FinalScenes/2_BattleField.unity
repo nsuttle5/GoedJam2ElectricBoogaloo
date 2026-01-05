@@ -7104,7 +7104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualEffect: {fileID: 323323348}
-  grow: 1
+  grow: 0
   stop: 0
   time: 0
   playRateMult: 0.2
