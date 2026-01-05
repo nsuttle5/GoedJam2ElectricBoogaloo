@@ -198,7 +198,7 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 0}
+  - eventSequence: {fileID: 11400000, guid: dd0ef615d655c544eb6728505f96919f, type: 2}
     name: Disturbing the peace look into my eyes
     vCamID: HANDING_THE_PEACE
     duration: 3
