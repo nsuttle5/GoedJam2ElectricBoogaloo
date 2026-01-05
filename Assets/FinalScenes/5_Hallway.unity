@@ -1087,30 +1087,66 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 0
-        y: 0
-        z: 0
+        x: -5.084259
+        y: -1.1530714
+        z: -4.699994
       TangentIn:
         x: -0
         y: -0
-        z: -7.0037775
+        z: -1.5517582
       TangentOut:
         x: 0
         y: 0
-        z: 7.0037775
+        z: 1.5517582
       Rotation:
         value:
-          x: 0.0004038959
-          y: -0.70700526
-          z: 0.00040378008
-          w: 0.7072081
+          x: -0.056084614
+          y: -0.66851413
+          z: 0.008709708
+          w: 0.7415305
     - Position:
-        x: -70.03773
-        y: -0.07999897
-        z: 0.02009964
+        x: -20.484283
+        y: -0.04307127
+        z: -3.149994
       TangentIn:
         x: -0
         y: -0
+        z: -3.9463887
+      TangentOut:
+        x: 0
+        y: 0
+        z: 2.4416459
+      Rotation:
+        value:
+          x: -0.02062525
+          y: -0.68949074
+          z: -0.004941699
+          w: 0.72398394
+    - Position:
+        x: -26.424286
+        y: -0.03307128
+        z: -3.1699944
+      TangentIn:
+        x: 0
+        y: 0
+        z: -3.1100163
+      TangentOut:
+        x: 0
+        y: 0
+        z: 3.1100163
+      Rotation:
+        value:
+          x: 0.00017174716
+          y: -0.7071067
+          z: -0.0001717472
+          w: 0.70710677
+    - Position:
+        x: -51.414276
+        y: -0.05307126
+        z: -3.819994
+      TangentIn:
+        x: 0
+        y: 0
         z: -7.0037775
       TangentOut:
         x: 0
@@ -1118,14 +1154,38 @@ MonoBehaviour:
         z: 7.0037775
       Rotation:
         value:
-          x: 0.0004038959
-          y: -0.70700526
-          z: 0.00040378008
-          w: 0.7072081
+          x: 0.00040389586
+          y: -0.7070053
+          z: 0.0004037801
+          w: 0.707208
+    - Position:
+        x: -73.81427
+        y: -0.08307123
+        z: -5.289994
+      TangentIn:
+        x: 0
+        y: 0
+        z: -7.003777
+      TangentOut:
+        x: 0
+        y: 0
+        z: 7.003777
+      Rotation:
+        value:
+          x: 0.00040389586
+          y: -0.7070053
+          z: 0.0004037801
+          w: 0.707208
     m_MetaData:
     - Mode: 0
       Tension: 0.5
     - Mode: 0
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
       Tension: 0.5
     m_Closed: 0
     m_IntData:
@@ -1680,7 +1740,7 @@ Transform:
   m_GameObject: {fileID: 576382514}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 7.9, y: 10.723, z: 42.3}
+  m_LocalPosition: {x: 2.8157654, y: 9.569946, z: 37.600006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1717,7 +1777,7 @@ MonoBehaviour:
     Position: 0
     Units: 1
   SplineOffset: {x: 0, y: 0, z: 0}
-  CameraRotation: 0
+  CameraRotation: 3
   Damping:
     Enabled: 0
     Position: {x: 0, y: 0, z: 0}
@@ -1725,14 +1785,14 @@ MonoBehaviour:
   AutomaticDolly:
     Enabled: 1
     Method:
-      rid: 3625767226884227155
+      rid: 422388501728985206
   m_LegacyPosition: -1
   m_LegacyUnits: 0
   m_LegacySpline: {fileID: 0}
   references:
     version: 2
     RefIds:
-    - rid: 3625767226884227155
+    - rid: 422388501728985206
       type: {class: SplineAutoDolly/FixedSpeed, ns: Unity.Cinemachine, asm: Unity.Cinemachine}
       data:
         Speed: 0
@@ -1793,7 +1853,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 576382518}
   dolly: {fileID: 576382517}
-  dollySpeed: 0.125
+  dollySpeed: 0.2
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.11161804
+      inSlope: 0.212429
+      outSlope: 0.212429
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.17316405
+      value: 0.14840311
+      inSlope: 0.34613276
+      outSlope: 0.34613276
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.67529404
+    - serializedVersion: 3
+      time: 0.46219587
+      value: 0.594251
+      inSlope: 0.1874209
+      outSlope: 0.1874209
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.2899453
+    - serializedVersion: 3
+      time: 0.89803034
+      value: 0.5947483
+      inSlope: -0.032114945
+      outSlope: -0.032114945
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.681379
+    - serializedVersion: 3
+      time: 0.99995524
+      value: 0.10204643
+      inSlope: 0.042278342
+      outSlope: 0.042278342
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.35285133
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &576382520
 MonoBehaviour:
   m_ObjectHideFlags: 0
