@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d209d5500c737940b62184ad4bc5d4c, type: 3}
   m_Name: Hallway
   m_EditorClassIdentifier: 
-  additiveScenesToLoad: []
+  additiveScenesToLoad:
+  - 2_BattleField
+  - 3_RadioRooms
+  - 5_Hallway
+  - 6_Doorway
   shots:
   - eventSequence: {fileID: 11400000, guid: 0f56ea1b313773e48a9195f5f554c372, type: 2}
     name: Cool dolly shot
