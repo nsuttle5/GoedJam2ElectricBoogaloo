@@ -10,6 +10,11 @@ public class NukeGrow : MonoBehaviour
     public float playRateMult = 1;
     public AnimationCurve curve;
     public float timeForCurve = 1;
+
+    public void Grow()
+    {
+        grow = true;
+    }
     void FixedUpdate()
     {
         if (stop)

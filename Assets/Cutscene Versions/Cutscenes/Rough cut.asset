@@ -294,7 +294,7 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 0}
+  - eventSequence: {fileID: 11400000, guid: ef800217e8896ab4bbdcf7c493069ca4, type: 2}
     name: WE BRING THE BOOM
     vCamID: BOOM
     duration: 15
