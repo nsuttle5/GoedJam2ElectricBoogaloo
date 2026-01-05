@@ -9,7 +9,7 @@ public class StartTimer : MonoBehaviour
 
     void Start()
     {
-        StartCountDown(110);
+        StartCountDown(70);
     }
     public void StartCountDown(int time)
     {

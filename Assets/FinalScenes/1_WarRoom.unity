@@ -1024,8 +1024,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00:00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6149,12 +6149,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotNumber: 0
-  cutsceneAsset: {fileID: 11400000, guid: cd9e94c4af2e4544e9c089d2c1c5c693, type: 2}
-  playOnStart: 1
+  verboseLogs: 0
+  playlist:
+  - {fileID: 11400000, guid: cd9e94c4af2e4544e9c089d2c1c5c693, type: 2}
+  playPlaylistOnStart: 1
+  startIndex: 0
   basePriority: 0
   activePriority: 20
   brain: {fileID: 951532044}
-  verboseLogs: 0
 --- !u!4 &382045226
 Transform:
   m_ObjectHideFlags: 0

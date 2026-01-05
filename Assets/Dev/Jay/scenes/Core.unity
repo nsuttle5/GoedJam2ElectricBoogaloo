@@ -255,8 +255,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484095806}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.10001445, y: 0.8952897, z: -0.35151827, w: -0.25473198}
-  m_LocalPosition: {x: 6.71, y: 3.84, z: 8.09}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -366.24573, y: 4.0230713, z: 11.399994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -345,11 +345,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60.000004
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 33.7
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -426,10 +426,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c47a3e9ddf0bf4c80727cc2ead21c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sequence: {fileID: 11400000, guid: f7cc7a2ca11399e408add9a2e2f7d22d, type: 2}
+  playlist:
+  - {fileID: 11400000, guid: f7cc7a2ca11399e408add9a2e2f7d22d, type: 2}
+  - {fileID: 11400000, guid: f7cc7a2ca11399e408add9a2e2f7d22d, type: 2}
+  loopPlaylist: 0
   playOnEnable: 1
   useUnscaledTime: 0
-  startTime: 0
+  startPlaylistIndex: 0
+  startTimeSeconds: 0
   verboseLogs: 0
 --- !u!4 &861030303
 Transform:
@@ -486,18 +490,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009469920}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dce0bf80bebc3f4a9e52c60ec359d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotNumber: -3
-  cutsceneAsset: {fileID: 11400000, guid: fa75fbf01130ede46a3082eef7f53366, type: 2}
-  playOnStart: 1
+  shotNumber: 0
+  verboseLogs: 0
+  playlist:
+  - {fileID: 11400000, guid: fa75fbf01130ede46a3082eef7f53366, type: 2}
+  - {fileID: 11400000, guid: fa75fbf01130ede46a3082eef7f53366, type: 2}
+  playPlaylistOnStart: 1
+  startIndex: 0
   basePriority: 0
   activePriority: 20
   brain: {fileID: 484095811}
-  verboseLogs: 0
 --- !u!1 &1151308827
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +570,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listenForKey: meow2
+  trigger:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1804987015
 BoxCollider:
   m_ObjectHideFlags: 0
