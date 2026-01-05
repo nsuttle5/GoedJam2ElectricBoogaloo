@@ -9,6 +9,7 @@ public class TitleScreen : MonoBehaviour
     {
         // TODO: Load the Starting scene, i don't know how this will be done
         SceneManager.LoadScene("1_WarRoom");
+        AudioController.StartBGM();
     }
     
     public void QuitGame()
