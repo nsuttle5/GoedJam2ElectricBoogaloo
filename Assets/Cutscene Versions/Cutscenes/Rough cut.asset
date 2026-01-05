@@ -42,18 +42,6 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 11400000, guid: 3d083e8ff88d90543ad1e3c1aba492cd, type: 2}
-    name: 
-    vCamID: 
-    duration: 0
-    overrideBlend: 0
-    blendTime: 0
-    blendStyle: 0
-    fadeIn: 0
-    fadeInTime: 0
-    fadeOut: 0
-    fadeOutTime: 0
-    fadeColor: {r: 0, g: 0, b: 0, a: 0}
   - eventSequence: {fileID: 11400000, guid: 5ddd46363bb529a4aabbcea6a14dd36a, type: 2}
     name: Flag through bios
     vCamID: LENS_VIEW
