@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 75a5efbe0035a43458f9c9af2c3206b6
+guid: cb08c5983f07bf547ac08fa515fd1a85
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -31,11 +31,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: ButtonPress
-      takeName: root|press
-      internalID: -8489546942427595836
+      name: stand and argue
+      takeName: root|stand argue
+      internalID: 3740687265773286815
       firstFrame: 0
-      lastFrame: 65
+      lastFrame: 624
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
