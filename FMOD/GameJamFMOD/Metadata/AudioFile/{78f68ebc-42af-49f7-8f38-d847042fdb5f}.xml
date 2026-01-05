@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{78f68ebc-42af-49f7-8f38-d847042fdb5f}">
+		<property name="assetPath">
+			<value>single-pistol-gunshot-33-37187.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.496</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{72c9a839-51cd-4ef7-9e95-993bd7d501d1}</destination>
+		</relationship>
+	</object>
+</objects>

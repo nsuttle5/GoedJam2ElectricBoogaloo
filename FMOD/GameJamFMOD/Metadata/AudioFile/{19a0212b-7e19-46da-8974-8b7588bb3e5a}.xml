@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{19a0212b-7e19-46da-8974-8b7588bb3e5a}">
+		<property name="assetPath">
+			<value>heavy-cloth-rustle-106346.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.7240816326530612</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{72c9a839-51cd-4ef7-9e95-993bd7d501d1}</destination>
+		</relationship>
+	</object>
+</objects>
