@@ -213,7 +213,7 @@ MonoBehaviour:
   - eventSequence: {fileID: 11400000, guid: 0f56ea1b313773e48a9195f5f554c372, type: 2}
     name: Cool dolly shot
     vCamID: DOLLY_SHOT
-    duration: 15
+    duration: 14.5
     overrideBlend: 0
     blendTime: 0
     blendStyle: 4
@@ -222,10 +222,10 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 0}
+  - eventSequence: {fileID: 11400000, guid: 07c52aa8fbd7b4142a310120ba9f635c, type: 2}
     name: Door opening
     vCamID: DOOR_OPEN
-    duration: 6
+    duration: 2.5
     overrideBlend: 0
     blendTime: 0
     blendStyle: 4
@@ -246,7 +246,7 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 0}
+  - eventSequence: {fileID: 11400000, guid: 4c026f39a61ab7a4d80062e47e37f333, type: 2}
     name: Fell for it again award
     vCamID: PRES_AND_BUTTON
     duration: 3

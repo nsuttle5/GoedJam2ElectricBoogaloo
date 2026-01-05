@@ -713,6 +713,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 855207595}
+  - component: {fileID: 855207596}
   m_Layer: 0
   m_Name: People
   m_TagString: Untagged
@@ -737,6 +738,46 @@ Transform:
   - {fileID: 1902586062}
   m_Father: {fileID: 130737407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &855207596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855207594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6db520d01cfbd94fb2e811ad9211f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listenForKey: STOP
+  trigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1132090635}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: STOP
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1902586064}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: STOP
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1015042422
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,6 +978,11 @@ Transform:
 --- !u!4 &1132090634 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3467036689225513679, guid: 55df96e36c65746458df753e8849b8c3, type: 3}
+  m_PrefabInstance: {fileID: 1132090631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1132090635 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3115248306286370413, guid: 55df96e36c65746458df753e8849b8c3, type: 3}
   m_PrefabInstance: {fileID: 1132090631}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1171342905 stripped
@@ -1762,6 +1808,11 @@ Transform:
 --- !u!4 &1902586063 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3467036689225513679, guid: 55df96e36c65746458df753e8849b8c3, type: 3}
+  m_PrefabInstance: {fileID: 1902586061}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1902586064 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3115248306286370413, guid: 55df96e36c65746458df753e8849b8c3, type: 3}
   m_PrefabInstance: {fileID: 1902586061}
   m_PrefabAsset: {fileID: 0}
 --- !u!33 &44372154449173541
