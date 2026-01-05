@@ -18,6 +18,7 @@ public class RunDollyWhenActive : MonoBehaviour
     {
         if(cam.IsLive)
         {
+            Debug.Log("Moving dolly");
             float location = dolly.CameraPosition;
             var fixedSpeedDolly = dolly.AutomaticDolly.Method as SplineAutoDolly.FixedSpeed;
 

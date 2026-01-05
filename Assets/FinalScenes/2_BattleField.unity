@@ -7746,7 +7746,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 349749392}
   dolly: {fileID: 349749397}
-  dollySpeed: 0.05
+  dollySpeed: 0.01
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &349749397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7764,7 +7788,7 @@ MonoBehaviour:
     Position: 0
     Units: 1
   SplineOffset: {x: 0, y: 0, z: 0}
-  CameraRotation: 0
+  CameraRotation: 3
   Damping:
     Enabled: 0
     Position: {x: 0, y: 0, z: 0}
