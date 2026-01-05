@@ -19,17 +19,23 @@ MonoBehaviour:
   - time: 0.5
     eventKey: listenrun1
     note: 
-  - time: 1
+  - time: 1.5
     eventKey: door1
     note: 
   - time: 0.2
     eventKey: door2
     note: 
-  - time: 3
+  - time: 3.5
     eventKey: door3
     note: 
   - time: 0.2
     eventKey: door4
+    note: 
+  - time: 1.5
+    eventKey: talk
+    note: 
+  - time: 0.35
+    eventKey: door5
     note: 
   events:
   - time: 6
@@ -38,15 +44,21 @@ MonoBehaviour:
   - time: 6.5
     eventKey: listenrun1
     note: 
-  - time: 7.5
+  - time: 8
     eventKey: door1
     note: 
-  - time: 7.7
+  - time: 8.2
     eventKey: door2
     note: 
-  - time: 10.7
+  - time: 11.7
     eventKey: door3
     note: 
-  - time: 10.9
+  - time: 11.9
     eventKey: door4
+    note: 
+  - time: 13.4
+    eventKey: talk
+    note: 
+  - time: 13.75
+    eventKey: door5
     note: 
