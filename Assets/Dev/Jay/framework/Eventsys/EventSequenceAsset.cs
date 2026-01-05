@@ -17,7 +17,7 @@ public sealed class EventSequenceAsset : ScriptableObject
     [Header("Config (Additive)")]
     public List<TimedEvent> additiveEvents = new();
 
-    [Header("Runtime (Absolute)")]
+    [HideInInspector]
     public List<TimedEvent> events = new();
 
 #if UNITY_EDITOR

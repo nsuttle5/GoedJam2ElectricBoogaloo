@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c460b2612110fd94b8436f1b6de64ee0, type: 3}
   m_Name: Nuke
   m_EditorClassIdentifier: 
+  additiveEvents:
+  - time: 2
+    eventKey: nuke
+    note: 
   events:
-  - time: 1
-    eventKey: grow
-    note: hi1
+  - time: 2
+    eventKey: nuke
+    note: 
