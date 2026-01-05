@@ -12,7 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c460b2612110fd94b8436f1b6de64ee0, type: 3}
   m_Name: Test2
   m_EditorClassIdentifier: 
-  events:
+  additiveEvents:
+  - time: 2
+    eventKey: 
+    note: 
   - time: 3
-    eventKey: meow2
-    note: igoaseoiughfd
+    eventKey: 
+    note: 
+  - time: 3
+    eventKey: 
+    note: 
+  events:
+  - time: 2
+    eventKey: 
+    note: 
+  - time: 5
+    eventKey: 
+    note: 
+  - time: 8
+    eventKey: 
+    note: 
