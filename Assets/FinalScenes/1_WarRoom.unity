@@ -5695,8 +5695,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272823837}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.98657924, z: -0, w: 0.16328348}
-  m_LocalPosition: {x: -140.66234, y: 71.57573, z: 18.071636}
+  m_LocalRotation: {x: 0, y: 0.97693396, z: 0, w: 0.2135417}
+  m_LocalPosition: {x: -140.66234, y: 72.753, z: 18.086}
   m_LocalScale: {x: 0.47044492, y: 0.47044486, z: 0.47044492}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5704,7 +5704,7 @@ Transform:
   - {fileID: 169139695}
   - {fileID: 1766775522}
   m_Father: {fileID: 1432662058}
-  m_LocalEulerAnglesHint: {x: 0, y: -558.795, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -564.66, z: 0}
 --- !u!114 &272823839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5730,7 +5730,7 @@ Animator:
   m_GameObject: {fileID: 272823837}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7106c21ac4423c542921317a31a4ee19, type: 3}
-  m_Controller: {fileID: 9100000, guid: 3c6880ab8045e4a479603ce9dc06d4ba, type: 2}
+  m_Controller: {fileID: 9100000, guid: f2c74c7527888bf47888dad0578f114b, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -36588,8 +36588,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969532931}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9739701, z: -0, w: -0.22667667}
-  m_LocalPosition: {x: -134.34, y: 71.57573, z: 17.72}
+  m_LocalRotation: {x: -0, y: 0.93916506, z: -0, w: -0.34346616}
+  m_LocalPosition: {x: -132.57, y: 71.57573, z: 17.58}
   m_LocalScale: {x: 0.47044492, y: 0.47044486, z: 0.47044492}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36597,7 +36597,7 @@ Transform:
   - {fileID: 1048638154}
   - {fileID: 1176260179}
   m_Father: {fileID: 1432662058}
-  m_LocalEulerAnglesHint: {x: 0, y: 206.203, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 220.176, z: 0}
 --- !u!114 &1969532933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36623,7 +36623,7 @@ Animator:
   m_GameObject: {fileID: 1969532931}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7106c21ac4423c542921317a31a4ee19, type: 3}
-  m_Controller: {fileID: 9100000, guid: 3c6880ab8045e4a479603ce9dc06d4ba, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4b1ab898074c65944ab60b426600a947, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
