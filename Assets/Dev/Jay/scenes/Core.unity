@@ -427,10 +427,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playlist:
-  - {fileID: 11400000, guid: f7cc7a2ca11399e408add9a2e2f7d22d, type: 2}
-  - {fileID: 11400000, guid: f7cc7a2ca11399e408add9a2e2f7d22d, type: 2}
+  - {fileID: 11400000, guid: 0f56ea1b313773e48a9195f5f554c372, type: 2}
   loopPlaylist: 0
-  playOnEnable: 1
+  playOnEnable: 0
   useUnscaledTime: 0
   startPlaylistIndex: 0
   startTimeSeconds: 0
