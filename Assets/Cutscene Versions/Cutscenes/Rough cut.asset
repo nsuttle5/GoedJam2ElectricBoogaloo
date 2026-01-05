@@ -117,7 +117,7 @@ MonoBehaviour:
   - eventSequence: {fileID: 11400000, guid: f9aab8595ddaed7409709abcfa267599, type: 2}
     name: Running to coms
     vCamID: LOOKING_AT_COM_TENT
-    duration: 2
+    duration: 1
     overrideBlend: 0
     blendTime: 0
     blendStyle: 4
@@ -225,7 +225,7 @@ MonoBehaviour:
   - eventSequence: {fileID: 11400000, guid: 07c52aa8fbd7b4142a310120ba9f635c, type: 2}
     name: Door opening
     vCamID: DOOR_OPEN
-    duration: 2.5
+    duration: 2
     overrideBlend: 0
     blendTime: 0
     blendStyle: 4
@@ -297,7 +297,7 @@ MonoBehaviour:
   - eventSequence: {fileID: 11400000, guid: 42fc7ec14b022ce49beb0612ffca5ff6, type: 2}
     name: WE BRING THE BOOM
     vCamID: BOOM
-    duration: 15
+    duration: 20
     overrideBlend: 0
     blendTime: 0
     blendStyle: 4
