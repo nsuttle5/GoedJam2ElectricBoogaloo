@@ -18,7 +18,8 @@ MonoBehaviour:
   - 5_Hallway
   - 6_Doorway
   shots:
-  - name: First clock shot
+  - eventSequence: {fileID: 0}
+    name: First clock shot
     vCamID: CLOCK_CAM
     duration: 2
     overrideBlend: 0
@@ -29,19 +30,9 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Overview of battlefield
+  - eventSequence: {fileID: 0}
+    name: Overview of battlefield
     vCamID: OVERHEAD_SHOT_BATTLEFIELD
-    duration: 2
-    overrideBlend: 0
-    blendTime: 0
-    blendStyle: 4
-    fadeIn: 0
-    fadeInTime: 0
-    fadeOut: 0
-    fadeOutTime: 0
-    fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Flag through bios
-    vCamID: LENS_VIEW
     duration: 3
     overrideBlend: 0
     blendTime: 0
@@ -51,9 +42,10 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Guy looking through bios 1
-    vCamID: GUY_HOLDING_BIOS
-    duration: 1
+  - eventSequence: {fileID: 0}
+    name: Flag through bios
+    vCamID: LENS_VIEW
+    duration: 2
     overrideBlend: 0
     blendTime: 0
     blendStyle: 4
@@ -62,9 +54,10 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Now he pulls out the radio
+  - eventSequence: {fileID: 0}
+    name: Guy looking through bios 1
     vCamID: GUY_HOLDING_BIOS
-    duration: 1
+    duration: 2
     overrideBlend: 0
     blendTime: 0
     blendStyle: 4
@@ -73,9 +66,22 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Above the table
+  - eventSequence: {fileID: 0}
+    name: Now he pulls out the radio
+    vCamID: GUY_HOLDING_BIOS
+    duration: 2
+    overrideBlend: 0
+    blendTime: 0
+    blendStyle: 4
+    fadeIn: 0
+    fadeInTime: 0
+    fadeOut: 0
+    fadeOutTime: 0
+    fadeColor: {r: 0, g: 0, b: 0, a: 0}
+  - eventSequence: {fileID: 0}
+    name: Above the table
     vCamID: ABOVE_TABLE
-    duration: 1
+    duration: 2
     overrideBlend: 0
     blendTime: 0
     blendStyle: 4
@@ -84,9 +90,10 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Pres closeup
+  - eventSequence: {fileID: 0}
+    name: Pres closeup
     vCamID: INFRONT_OF_PRES
-    duration: 2
+    duration: 3
     overrideBlend: 0
     blendTime: 0
     blendStyle: 4
@@ -95,9 +102,10 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Infront of the button
+  - eventSequence: {fileID: 0}
+    name: Infront of the button
     vCamID: BUTTON_AND_TABLE
-    duration: 2
+    duration: 3
     overrideBlend: 0
     blendTime: 0
     blendStyle: 4
@@ -106,7 +114,8 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Running to coms
+  - eventSequence: {fileID: 0}
+    name: Running to coms
     vCamID: LOOKING_AT_COM_TENT
     duration: 2
     overrideBlend: 0
@@ -117,7 +126,8 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Closeup at the com tent
+  - eventSequence: {fileID: 0}
+    name: Closeup at the com tent
     vCamID: GUY_OUTSIDE_COMS
     duration: 2
     overrideBlend: 0
@@ -128,8 +138,9 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Guy at coms tent pulls out radio
-    vCamID: LOOKING_AT_COM_TENT
+  - eventSequence: {fileID: 0}
+    name: Guy at coms tent pulls out radio
+    vCamID: GUY_OUTSIDE_COMS
     duration: 2
     overrideBlend: 0
     blendTime: 0
@@ -139,7 +150,8 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Second clock shot
+  - eventSequence: {fileID: 0}
+    name: Second clock shot
     vCamID: CLOCK_CAM
     duration: 2
     overrideBlend: 0
@@ -150,7 +162,8 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Wide FOV map shot
+  - eventSequence: {fileID: 0}
+    name: Wide FOV map shot
     vCamID: MAP_WIDE_FOV
     duration: 3
     overrideBlend: 0
@@ -161,7 +174,8 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Pres and the button
+  - eventSequence: {fileID: 0}
+    name: Pres and the button
     vCamID: PRES_AND_BUTTON
     duration: 3
     overrideBlend: 0
@@ -172,7 +186,8 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Inside the coms tent
+  - eventSequence: {fileID: 0}
+    name: Inside the coms tent
     vCamID: BEHIND_RADIO_TABLE
     duration: 2
     overrideBlend: 0
@@ -183,9 +198,10 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Disturbing the peace look into my eyes
+  - eventSequence: {fileID: 0}
+    name: Disturbing the peace look into my eyes
     vCamID: HANDING_THE_PEACE
-    duration: 2
+    duration: 3
     overrideBlend: 0
     blendTime: 0
     blendStyle: 4
@@ -194,7 +210,8 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Cool dolly shot
+  - eventSequence: {fileID: 0}
+    name: Cool dolly shot
     vCamID: DOLLY_SHOT
     duration: 10
     overrideBlend: 0
@@ -205,7 +222,8 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Door opening
+  - eventSequence: {fileID: 0}
+    name: Door opening
     vCamID: DOOR_OPEN
     duration: 6
     overrideBlend: 0
@@ -216,9 +234,10 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Everyone at the table
+  - eventSequence: {fileID: 0}
+    name: Everyone at the table
     vCamID: TABLE_FROM_SIDE
-    duration: 2
+    duration: 3
     overrideBlend: 0
     blendTime: 0
     blendStyle: 4
@@ -227,9 +246,10 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Fell for it again award
+  - eventSequence: {fileID: 0}
+    name: Fell for it again award
     vCamID: PRES_AND_BUTTON
-    duration: 2
+    duration: 3
     overrideBlend: 0
     blendTime: 0
     blendStyle: 4
@@ -238,9 +258,10 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Third clock shot
+  - eventSequence: {fileID: 0}
+    name: Third clock shot
     vCamID: CLOCK_CAM
-    duration: 2
+    duration: 3
     overrideBlend: 0
     blendTime: 0
     blendStyle: 4
@@ -249,7 +270,8 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Dolly guy shocked
+  - eventSequence: {fileID: 0}
+    name: Dolly guy shocked
     vCamID: DOOR_OPEN
     duration: 3
     overrideBlend: 0
@@ -260,7 +282,8 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: Back to bios guy
+  - eventSequence: {fileID: 0}
+    name: Back to bios guy
     vCamID: GUY_HOLDING_BIOS
     duration: 3
     overrideBlend: 0
@@ -271,7 +294,8 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - name: WE BRING THE BOOM
+  - eventSequence: {fileID: 0}
+    name: WE BRING THE BOOM
     vCamID: BOOM
     duration: 15
     overrideBlend: 0
