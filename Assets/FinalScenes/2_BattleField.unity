@@ -7605,8 +7605,10 @@ GameObject:
   m_Component:
   - component: {fileID: 349749393}
   - component: {fileID: 349749392}
+  - component: {fileID: 349749397}
   - component: {fileID: 349749394}
   - component: {fileID: 349749395}
+  - component: {fileID: 349749396}
   m_Layer: 0
   m_Name: OVERHEAD_SHOT_BATTLEFIELD
   m_TagString: Untagged
@@ -7665,13 +7667,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349749391}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1208751, y: 0.71386546, z: -0.121434964, w: 0.67899853}
-  m_LocalPosition: {x: -29.431, y: 12.58, z: 22.23}
+  m_LocalRotation: {x: 0.15504174, y: 0.70723194, z: -0.16363777, w: 0.6700804}
+  m_LocalPosition: {x: -30.158386, y: 12.949951, z: 22.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 968666371568272344}
-  m_LocalEulerAnglesHint: {x: 19.726, y: 92.949, z: 0.467}
+  m_LocalEulerAnglesHint: {x: 26.055, y: 93.09, z: 0.033}
 --- !u!114 &349749394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7701,6 +7703,57 @@ MonoBehaviour:
   maxRotationX: 1
   maxRotationY: 1
   smoothSpeed: 5
+--- !u!114 &349749396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349749391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d642337675005644980b9fe2b373b7a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 349749392}
+  dolly: {fileID: 349749397}
+  dollySpeed: 0.05
+--- !u!114 &349749397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349749391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90eebaab98e4b44b0ba8c79821e554e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SplineSettings:
+    Spline: {fileID: 394321211}
+    Position: 0
+    Units: 1
+  SplineOffset: {x: 0, y: 0, z: 0}
+  CameraRotation: 0
+  Damping:
+    Enabled: 0
+    Position: {x: 0, y: 0, z: 0}
+    Angular: 0
+  AutomaticDolly:
+    Enabled: 1
+    Method:
+      rid: 3625767250315968616
+  m_LegacyPosition: -1
+  m_LegacyUnits: 0
+  m_LegacySpline: {fileID: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: 3625767250315968616
+      type: {class: SplineAutoDolly/FixedSpeed, ns: Unity.Cinemachine, asm: Unity.Cinemachine}
+      data:
+        Speed: 0
 --- !u!1 &352450590
 GameObject:
   m_ObjectHideFlags: 0
@@ -8573,6 +8626,118 @@ Transform:
   - {fileID: 687917416}
   - {fileID: 1471653480}
   m_Father: {fileID: 982190591}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &394321210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 394321212}
+  - component: {fileID: 394321211}
+  m_Layer: 0
+  m_Name: Overhead spline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &394321211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394321210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab5c7d4c32e743048dfca98e2d5914f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Spline:
+    m_EditModeType: 1
+    m_Knots: []
+    m_MetaData: []
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
+  m_Splines:
+  - m_EditModeType: 1
+    m_Knots:
+    - Position:
+        x: 0
+        y: 0
+        z: 0
+      TangentIn:
+        x: -0
+        y: -0
+        z: -8.866655
+      TangentOut:
+        x: 0
+        y: 0
+        z: 8.866655
+      Rotation:
+        value:
+          x: 4.2708605e-20
+          y: 0.8242937
+          z: 2.933422e-20
+          w: 0.56616247
+    - Position:
+        x: 82.758545
+        y: 0
+        z: -31.824213
+      TangentIn:
+        x: -0
+        y: -0
+        z: -8.866655
+      TangentOut:
+        x: 0
+        y: 0
+        z: 8.866655
+      Rotation:
+        value:
+          x: 4.2708602e-20
+          y: 0.8242937
+          z: 2.9334212e-20
+          w: 0.56616247
+    m_MetaData:
+    - Mode: 0
+      Tension: 0.5
+    - Mode: 0
+      Tension: 0.5
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
+  m_Knots:
+    m_KnotsLink: []
+--- !u!4 &394321212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394321210}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2554.59, y: 2012.95, z: 22.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &396295127
 GameObject:
@@ -51762,3 +51927,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 830484392}
   - {fileID: 38000322}
+  - {fileID: 394321212}
