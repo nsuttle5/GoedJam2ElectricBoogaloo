@@ -30,7 +30,7 @@ public class NukeGrow : MonoBehaviour
         }
 
         visualEffect.playRate = playRateMult * curve.Evaluate(Mathf.Clamp(time/timeForCurve, 0, 1));
-        //visualEffect.SetFloat("Radius", Mathf.Clamp(time/timeForCurve, 0, 1)*40);
+        visualEffect.SetFloat("Radius", Mathf.Clamp(curve.Evaluate(Mathf.Clamp(time/timeForCurve, 0, 1)), 0, 1)*40);
         //visualEffect.SetFloat("startSpeed", time);
         time+= Time.deltaTime;
     }

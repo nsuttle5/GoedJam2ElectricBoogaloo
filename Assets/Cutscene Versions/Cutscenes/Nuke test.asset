@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d209d5500c737940b62184ad4bc5d4c, type: 3}
+  m_Name: Nuke test
+  m_EditorClassIdentifier: 
+  additiveScenesToLoad:
+  - 2_BattleField
+  - 3_RadioRooms
+  - 5_Hallway
+  - 6_Doorway
+  shots:
+  - eventSequence: {fileID: 11400000, guid: ef800217e8896ab4bbdcf7c493069ca4, type: 2}
+    name: WE BRING THE BOOM
+    vCamID: BOOM
+    duration: 15
+    overrideBlend: 0
+    blendTime: 0
+    blendStyle: 4
+    fadeIn: 0
+    fadeInTime: 0
+    fadeOut: 0
+    fadeOutTime: 0
+    fadeColor: {r: 0, g: 0, b: 0, a: 0}
+  nextSceneSingleLoad: 
+  preloadNextSceneDuringLastShot: 1
+  preloadLeadSeconds: 1
