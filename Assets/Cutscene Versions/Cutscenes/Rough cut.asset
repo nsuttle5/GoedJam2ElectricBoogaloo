@@ -42,7 +42,7 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 11400000, guid: 3d083e8ff88d90543ad1e3c1aba492cd, type: 2}
+  - eventSequence: {fileID: 11400000, guid: 5ddd46363bb529a4aabbcea6a14dd36a, type: 2}
     name: Flag through bios
     vCamID: LENS_VIEW
     duration: 2
@@ -150,7 +150,7 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 0}
+  - eventSequence: {fileID: 11400000, guid: 9d1fff9334124c64ebe13add33f747b4, type: 2}
     name: Second clock shot
     vCamID: CLOCK_CAM
     duration: 2
@@ -162,7 +162,7 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 0}
+  - eventSequence: {fileID: 11400000, guid: 5ddd46363bb529a4aabbcea6a14dd36a, type: 2}
     name: Wide FOV map shot
     vCamID: MAP_WIDE_FOV
     duration: 3
@@ -258,7 +258,7 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 0}
+  - eventSequence: {fileID: 11400000, guid: 3384cb3093eb5624e82dd329a88f8e42, type: 2}
     name: Third clock shot
     vCamID: CLOCK_CAM
     duration: 3

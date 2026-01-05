@@ -10,7 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c460b2612110fd94b8436f1b6de64ee0, type: 3}
-  m_Name: MapZoomOut
+  m_Name: ClockSetting2
   m_EditorClassIdentifier: 
-  additiveEvents: []
-  events: []
+  additiveEvents:
+  - time: 0
+    eventKey: Clock3
+    note: 
+  events:
+  - time: 0
+    eventKey: Clock3
+    note: 

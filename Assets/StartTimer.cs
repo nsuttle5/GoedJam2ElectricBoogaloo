@@ -5,11 +5,12 @@ using UnityEngine;
 public class StartTimer : MonoBehaviour
 {
     public TMP_Text text;
+    public bool isNegative;
     private int truetime;
 
     void Start()
     {
-        StartCountDown(70);
+        StartCountDown(60);
     }
     public void StartCountDown(int time)
     {
@@ -21,13 +22,13 @@ public class StartTimer : MonoBehaviour
     void SetTime()
     {
         string setTime = "0"+((truetime-truetime%60)/60).ToString() + ":" + (((truetime%60) < 10) ? "0" : "") + (truetime%60).ToString();
-        text.text = setTime;
+        text.text = (isNegative ? "-" : "") + setTime;
     }
 
     IEnumerator Count()
     {
         yield return new WaitForSeconds(1);
-        truetime-=1;
+        truetime += isNegative ? 1 : -1;
         SetTime();
         StartCoroutine(Count());
     }
