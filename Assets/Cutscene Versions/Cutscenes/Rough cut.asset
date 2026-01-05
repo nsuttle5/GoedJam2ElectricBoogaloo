@@ -114,7 +114,7 @@ MonoBehaviour:
     fadeOut: 0
     fadeOutTime: 0
     fadeColor: {r: 0, g: 0, b: 0, a: 0}
-  - eventSequence: {fileID: 0}
+  - eventSequence: {fileID: 11400000, guid: f9aab8595ddaed7409709abcfa267599, type: 2}
     name: Running to coms
     vCamID: LOOKING_AT_COM_TENT
     duration: 2

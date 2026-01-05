@@ -1118,7 +1118,6 @@ Transform:
   - {fileID: 2072792696}
   - {fileID: 850458934}
   - {fileID: 1938614792}
-  - {fileID: 1937510077}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &41846558
@@ -22257,7 +22256,7 @@ Animator:
   m_GameObject: {fileID: 850458933}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7106c21ac4423c542921317a31a4ee19, type: 3}
-  m_Controller: {fileID: 9100000, guid: 3c6880ab8045e4a479603ce9dc06d4ba, type: 2}
+  m_Controller: {fileID: 9100000, guid: ddabead52660afa43b71181a2151e1f9, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -47836,6 +47835,8 @@ GameObject:
   - component: {fileID: 1937510077}
   - component: {fileID: 1937510079}
   - component: {fileID: 1937510078}
+  - component: {fileID: 1937510081}
+  - component: {fileID: 1937510080}
   m_Layer: 0
   m_Name: Guy who walks to the man outside coms tent
   m_TagString: Untagged
@@ -47852,14 +47853,14 @@ Transform:
   m_GameObject: {fileID: 1937510076}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.5097828, z: -0, w: 0.86030316}
-  m_LocalPosition: {x: -62.98999, y: 8.02002, z: -78.68}
-  m_LocalScale: {x: 0.47044486, y: 0.47044486, z: 0.47044486}
+  m_LocalPosition: {x: 0.35083008, y: -3.6657715, z: -5.5417786}
+  m_LocalScale: {x: 0.47044483, y: 0.47044486, z: 0.47044483}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 107943955}
   - {fileID: 1160846469}
   - {fileID: 718294569}
-  m_Father: {fileID: 38000322}
+  m_Father: {fileID: 1994548838}
   m_LocalEulerAnglesHint: {x: 0, y: -61.299, z: 0}
 --- !u!114 &1937510078
 MonoBehaviour:
@@ -47886,7 +47887,7 @@ Animator:
   m_GameObject: {fileID: 1937510076}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7106c21ac4423c542921317a31a4ee19, type: 3}
-  m_Controller: {fileID: 9100000, guid: 3c6880ab8045e4a479603ce9dc06d4ba, type: 2}
+  m_Controller: {fileID: 9100000, guid: 68e171b6061a86747894a695d2eb1915, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -47898,6 +47899,49 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1937510080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937510076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6db520d01cfbd94fb2e811ad9211f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listenForKey: talk
+  trigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1937510079}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: talk
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1937510081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937510076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14482064800bbbe4587b5e38decef85d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceAnimator: {fileID: 1994548837}
+  thisAnimator: {fileID: 1937510079}
+  multiplier: 0.1
 --- !u!1 &1937760347
 GameObject:
   m_ObjectHideFlags: 0
@@ -48021,7 +48065,7 @@ Animator:
   m_GameObject: {fileID: 1938614791}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7106c21ac4423c542921317a31a4ee19, type: 3}
-  m_Controller: {fileID: 9100000, guid: 3c6880ab8045e4a479603ce9dc06d4ba, type: 2}
+  m_Controller: {fileID: 9100000, guid: 51d2ff70a0286f742b969d4eb7799da1, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -49602,6 +49646,61 @@ Transform:
   m_Children:
   - {fileID: 956691263}
   m_Father: {fileID: 946458624}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1994548836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1994548838}
+  - component: {fileID: 1994548837}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1994548837
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994548836}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d667c9d4ddff394db9285246414285d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &1994548838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994548836}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2518.96, y: 2011.737, z: -75.77}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1937510077}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1994763075
 GameObject:
@@ -51211,7 +51310,7 @@ Animator:
   m_GameObject: {fileID: 2072792695}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7106c21ac4423c542921317a31a4ee19, type: 3}
-  m_Controller: {fileID: 9100000, guid: 3c6880ab8045e4a479603ce9dc06d4ba, type: 2}
+  m_Controller: {fileID: 9100000, guid: 51d2ff70a0286f742b969d4eb7799da1, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -53089,7 +53188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85bd086cd00840946af3504dbc8add0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listenForKey: Return
+  cam: {fileID: 0}
+  returnTime: 90
 --- !u!1 &1468643037177203349
 GameObject:
   m_ObjectHideFlags: 0
@@ -54054,3 +54154,4 @@ SceneRoots:
   - {fileID: 38000322}
   - {fileID: 394321212}
   - {fileID: 1855317532}
+  - {fileID: 1994548838}
