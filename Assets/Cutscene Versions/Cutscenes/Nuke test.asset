@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d209d5500c737940b62184ad4bc5d4c, type: 3}
-  m_Name: Hallway
+  m_Name: Nuke test
   m_EditorClassIdentifier: 
   additiveScenesToLoad:
   - 2_BattleField
@@ -18,9 +18,9 @@ MonoBehaviour:
   - 5_Hallway
   - 6_Doorway
   shots:
-  - eventSequence: {fileID: 11400000, guid: 0f56ea1b313773e48a9195f5f554c372, type: 2}
-    name: Cool dolly shot
-    vCamID: DOLLY_SHOT
+  - eventSequence: {fileID: 11400000, guid: ef800217e8896ab4bbdcf7c493069ca4, type: 2}
+    name: WE BRING THE BOOM
+    vCamID: BOOM
     duration: 15
     overrideBlend: 0
     blendTime: 0
