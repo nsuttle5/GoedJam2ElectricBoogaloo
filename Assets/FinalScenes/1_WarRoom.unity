@@ -18442,7 +18442,7 @@ MonoBehaviour:
   UpdateMethod: 2
   BlendUpdateMethod: 1
   LensModeOverride:
-    Enabled: 0
+    Enabled: 1
     DefaultMode: 2
   DefaultBlend:
     Style: 0
@@ -27886,7 +27886,7 @@ MonoBehaviour:
   PivotOffset: {x: 0, y: 0, z: 0}
   AmplitudeGain: 1
   FrequencyGain: 1
-  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+  m_NoiseOffsets: {x: -382.33768, y: -269.27075, z: 672.27747}
 --- !u!1 &1452338481
 GameObject:
   m_ObjectHideFlags: 0
@@ -28043,7 +28043,7 @@ Transform:
   m_GameObject: {fileID: 1461488486}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 20.04, y: 2.76, z: -3.69}
+  m_LocalPosition: {x: 8.56, y: 0.86, z: -3.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28087,12 +28087,12 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 139.7
-    OrthographicSize: 10
-    NearClipPlane: 0.1
+    FieldOfView: 59.5
+    OrthographicSize: 4.29
+    NearClipPlane: 0.53
     FarClipPlane: 5000
     Dutch: 0
-    ModeOverride: 0
+    ModeOverride: 1
     PhysicalProperties:
       GateFit: 2
       SensorSize: {x: 21.946, y: 16.002}
@@ -28135,9 +28135,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NoiseProfile: {fileID: 11400000, guid: 46965f9cbaf525742a6da4c2172a99cd, type: 2}
   PivotOffset: {x: 0, y: 0, z: 0}
-  AmplitudeGain: 1
-  FrequencyGain: 1
-  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+  AmplitudeGain: 0.13
+  FrequencyGain: 0.79
+  m_NoiseOffsets: {x: 655.71045, y: -247.3999, z: -476.3783}
 --- !u!1 &1464037968
 GameObject:
   m_ObjectHideFlags: 0
@@ -44322,7 +44322,7 @@ Transform:
   m_GameObject: {fileID: 2083991721438646157}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70323527, y: -0.07389308, z: -0.07389308, w: 0.70323527}
-  m_LocalPosition: {x: 6.18, y: 1.9032458, z: -2.92}
+  m_LocalPosition: {x: 5.17, y: 1.9032458, z: -3.13}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
